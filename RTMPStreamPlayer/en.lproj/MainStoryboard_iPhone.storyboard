@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="host URL" minimumFontSize="17" id="3If-5d-UJt">
+                                <rect key="frame" x="8" y="20" width="302" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="stream Name" minimumFontSize="17" id="anp-IW-UPw">
+                                <rect key="frame" x="8" y="59" width="302" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2Kl-AK-b68">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CUc-uE-ZZ5"/>
+                                    <barButtonItem title="Connect" id="cEj-yc-gYz">
+                                        <connections>
+                                            <action selector="connectControl:" destination="2" id="ZRz-4a-td0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Hih-dV-x9f"/>
+                                    <barButtonItem enabled="NO" title="Play" id="hbU-7M-k9l">
+                                        <connections>
+                                            <action selector="playControl:" destination="2" id="dRz-v8-Irp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="K8S-Ad-8af"/>
+                                </items>
+                            </toolbar>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="lbf-S3-hxa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Quu-Nx-ScR">
+                                <rect key="frame" x="175" y="389" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnConnect" destination="cEj-yc-gYz" id="lzx-6p-xuO"/>
+                        <outlet property="btnPlay" destination="hbU-7M-k9l" id="oSq-Vs-H0H"/>
+                        <outlet property="hostTextField" destination="3If-5d-UJt" id="yhZ-uX-617"/>
+                        <outlet property="memoryLabel" destination="Quu-Nx-ScR" id="ETb-ek-VP0"/>
+                        <outlet property="previewView" destination="lbf-S3-hxa" id="a9z-EV-Aa3"/>
+                        <outlet property="streamTextField" destination="anp-IW-UPw" id="Bfc-5F-2dt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="camerasToggle:"/>
+                <relationship kind="action" name="connectControl:"/>
+                <relationship kind="action" name="playControl:"/>
+                <relationship kind="action" name="publishControl:"/>
+                <relationship kind="outlet" name="btnConnect" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="btnPlay" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="btnPublish" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="btnToggle" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="hostTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="memoryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="previewView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="streamTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="streamView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

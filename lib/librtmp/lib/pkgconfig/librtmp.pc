@@ -1,0 +1,13 @@
+prefix=/Users/ghookey/Source/Duane/librtmp-2.4
+exec_prefix=${prefix}
+libdir=/Users/ghookey/Source/Duane/librtmp-2.4/lib
+incdir=${prefix}/include
+
+Name: librtmp
+Description: RTMP implementation
+Version: v2.4
+Requires: 
+URL: http://rtmpdump.mplayerhq.hu
+Libs: -L${libdir} -lrtmp -lz
+Libs.private: 
+Cflags: -I${incdir}

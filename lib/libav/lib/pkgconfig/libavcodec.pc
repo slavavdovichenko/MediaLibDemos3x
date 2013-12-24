@@ -1,0 +1,14 @@
+prefix=../libav
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: Libav codec library
+Version: 54.23.1
+Requires: libavutil = 51.37.0
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavcodec -lx264 -lspeex -lm -lbz2 -lz
+Libs.private: 
+Cflags: -I${includedir}
