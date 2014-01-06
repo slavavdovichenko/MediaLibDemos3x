@@ -101,6 +101,8 @@
 #if 1 // ------------------ use MPMediaDecoder
     
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
+    decoder.orientation = UIImageOrientationRightMirrored;
+    decoder.scale = 0.5f;
     [decoder setupStream:[NSString stringWithFormat:@"%@/%@", hostTextField.text, streamTextField.text]];
 
     previewView.hidden = NO;

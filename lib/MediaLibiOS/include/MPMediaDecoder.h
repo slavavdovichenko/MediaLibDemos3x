@@ -24,6 +24,8 @@
 @interface MPMediaDecoder : NSObject
 @property (nonatomic, retain) id <IVideoPlayer> video;
 @property (nonatomic, retain) id <IAudioPlayer> audio;
+@property CGFloat scale;
+@property UIImageOrientation orientation;
 
 -(id)initWithView:(UIImageView *)view;
 

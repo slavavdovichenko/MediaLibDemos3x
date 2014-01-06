@@ -126,8 +126,8 @@
     upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     
     //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
-    //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
-    upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
+    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
     
     //[upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeRight];
     //[upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];

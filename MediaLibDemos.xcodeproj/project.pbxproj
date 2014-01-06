@@ -85,6 +85,9 @@
 		F90989491869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
 		F909894A1869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
 		F909894B1869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
+		F946A75E186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
+		F946A75F186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
+		F946A760186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
 		F97C89161705810B00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89171705811500F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89181705811E00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
@@ -276,6 +279,7 @@
 		F90988FD1869ED0200952AE9 /* x264.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = x264.pc; sourceTree = "<group>"; };
 		F9215AFB18116B5000748EBB /* MPMediaDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaDecoder.h; sourceTree = "<group>"; };
 		F9215B301817C9A300748EBB /* StreamReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamReader.h; sourceTree = "<group>"; };
+		F946A75D186C6D2C009E66DE /* license.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = license.bin; sourceTree = "<group>"; };
 		F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F97C8914170580EC00F0B611 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F97CF4E91810023D00564C37 /* MPMediaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaData.h; sourceTree = "<group>"; };
@@ -848,6 +852,15 @@
 			path = pkgconfig;
 			sourceTree = "<group>";
 		};
+		F946A75C186C6D2B009E66DE /* com.themidnightcoders.license */ = {
+			isa = PBXGroup;
+			children = (
+				F946A75D186C6D2C009E66DE /* license.bin */,
+			);
+			name = com.themidnightcoders.license;
+			path = ../../WebORBiOS/CommLibiOS/com.themidnightcoders.license;
+			sourceTree = "<group>";
+		};
 		F988F2AD15AD843C0083CB14 /* RTMPStreamPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,6 +889,7 @@
 		F9BBFA1614A49BA500C5B39B = {
 			isa = PBXGroup;
 			children = (
+				F946A75C186C6D2B009E66DE /* com.themidnightcoders.license */,
 				F9F3EDB8161070D200B0EA20 /* art */,
 				F9BBFA8714A49D0C00C5B39B /* lib */,
 				F9F6992515AC5D01004B6F37 /* RTMPStreamPublisher */,
@@ -1176,6 +1190,7 @@
 				F909893B1869ED0400952AE9 /* speex.m4 in Resources */,
 				F90989441869ED0400952AE9 /* vo-aacenc.pc in Resources */,
 				F90989171869ED0300952AE9 /* libavdevice.pc in Resources */,
+				F946A75F186C6D2C009E66DE /* license.bin in Resources */,
 				F909894A1869ED0400952AE9 /* x264.pc in Resources */,
 				F909891D1869ED0300952AE9 /* libavformat.pc in Resources */,
 			);
@@ -1201,6 +1216,7 @@
 				F909893A1869ED0400952AE9 /* speex.m4 in Resources */,
 				F90989431869ED0400952AE9 /* vo-aacenc.pc in Resources */,
 				F90989161869ED0300952AE9 /* libavdevice.pc in Resources */,
+				F946A75E186C6D2C009E66DE /* license.bin in Resources */,
 				F90989491869ED0400952AE9 /* x264.pc in Resources */,
 				F909891C1869ED0300952AE9 /* libavformat.pc in Resources */,
 			);
@@ -1225,6 +1241,7 @@
 				F9F703351652641D004FCA9B /* MainStoryboard_iPhone.storyboard in Resources */,
 				F909892D1869ED0300952AE9 /* librtmp.pc in Resources */,
 				F909893C1869ED0400952AE9 /* speex.m4 in Resources */,
+				F946A760186C6D2C009E66DE /* license.bin in Resources */,
 				F9F703381652641D004FCA9B /* MainStoryboard_iPad.storyboard in Resources */,
 				F90989181869ED0300952AE9 /* libavdevice.pc in Resources */,
 				F90989361869ED0400952AE9 /* speex.pc in Resources */,
