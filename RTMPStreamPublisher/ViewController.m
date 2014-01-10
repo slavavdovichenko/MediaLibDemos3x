@@ -126,11 +126,11 @@
     upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     
     //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
-    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
-    //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
     
     //[upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeRight];
-    //[upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];
+    [upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];
     //[upstream setVideoBitrate:512000];
     
     [upstream stream:streamTextField.text publishType:PUBLISH_LIVE];
