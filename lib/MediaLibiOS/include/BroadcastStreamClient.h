@@ -60,18 +60,16 @@ enum audio_mode
 -(id)initOnlyVideoWithClient:(RTMPClient *)client resolution:(MPVideoResolution)resolution;
 
 -(BOOL)setVideoMode:(VideoMode)mode;
--(void)setVideoResolution:(MPVideoResolution)resolution;
--(void)setVideoBitrate:(uint)bitRate;
--(void)setVideoResolution:(MPVideoResolution)resolution bitRate:(uint)bitRate;
--(void)setVideoOrientation:(AVCaptureVideoOrientation)orientation;
+-(BOOL)setVideoResolution:(MPVideoResolution)resolution;
+-(BOOL)setVideoBitrate:(uint)bitRate;
+-(BOOL)setVideoResolution:(MPVideoResolution)resolution bitRate:(uint)bitRate;
+-(BOOL)setVideoOrientation:(AVCaptureVideoOrientation)orientation;
 -(void)setPreviewLayer:(UIView *)preview;
 -(void)teardownPreviewLayer;
 -(void)switchCameras;
 -(AVCaptureSession *)getCaptureSession;
 
 -(BOOL)setAudioMode:(AudioMode)mode;
--(void)setAudioPickingSeconds:(float)seconds;
--(void)setAudioBitrate:(uint)bitRate;
 
 -(BOOL)connect:(NSString *)url name:(NSString *)name publishType:(MPMediaPublishType)type;
 -(BOOL)attach:(RTMPClient *)client name:(NSString *)name publishType:(MPMediaPublishType)type;

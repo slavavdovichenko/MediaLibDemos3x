@@ -9,6 +9,4 @@
 #import "MPMediaData.h"
 
 @interface MPMediaEncoder : NSObject <MPIMediaEncoder>
-@property MPVideoResolution resolution;
-@property uint bitRate;
 @end

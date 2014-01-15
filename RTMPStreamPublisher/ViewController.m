@@ -21,6 +21,7 @@
     BroadcastStreamClient   *upstream;
     
     MPVideoResolution       resolution;
+    AVCaptureVideoOrientation orientation;
 }
 
 -(void)sizeMemory:(NSNumber *)memory;
@@ -44,6 +45,8 @@
     
     socket = nil;
     upstream = nil;
+    
+    orientation = AVCaptureVideoOrientationLandscapeRight;
     
     //echoCancellationOff;
     
@@ -128,14 +131,20 @@
     //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
     //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
     upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
-    
-    //[upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeRight];
-    [upstream setVideoOrientation:AVCaptureVideoOrientationLandscapeLeft];
+
     //[upstream setVideoBitrate:512000];
+    //[upstream setVideoResolution:RESOLUTION_MEDIUM];
+    
+    //orientation = AVCaptureVideoOrientationPortrait;
+    //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
+    //orientation = VCaptureVideoOrientationLandscapeRight;
+    //orientation = AVCaptureVideoOrientationLandscapeLeft;
+    orientation = orientation % AVCaptureVideoOrientationLandscapeLeft + 1;
+    [upstream setVideoOrientation:orientation];
     
     [upstream stream:streamTextField.text publishType:PUBLISH_LIVE];
-    //[upstream stream:streamTextField.text publishType:PUBLISH_RECORD];
-    //[upstream stream:streamTextField.text publishType:PUBLISH_APPEND];
+    //[upstream stream:streamTextField.text orientation:orientation publishType:PUBLISH_RECORD];
+    //[upstream stream:streamTextField.text orientation:orientation publishType:PUBLISH_APPEND];
     
     btnConnect.title = @"Disconnect"; 
     
@@ -188,7 +197,7 @@
 -(IBAction)publishControl:(id)sender {
    
     NSLog(@"publishControl: stream = %@", streamTextField.text);
-    
+
     (upstream.state != STREAM_PLAYING) ? [upstream start] : [upstream pause];
 }
 
@@ -291,6 +300,9 @@
 /*/// Send metadata for each video frame
 -(void)pixelBufferShouldBePublished:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp {
     
+    NSLog(@" $$$$$$ <MPIMediaStreamEvent> pixelBufferShouldBePublished: %d [%@]", timestamp, [NSThread isMainThread]?@"M":@"T");
+
+#if 0
     //[upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp]} event:@"videoFrameOptions:"];
     
     //
@@ -305,7 +317,8 @@
     size_t height = CVPixelBufferGetHeight(frameBuffer);
     
     [upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp], @"bufferSize":[NSNumber numberWithInt:bufferSize], @"width":[NSNumber numberWithInt:width], @"height":[NSNumber numberWithInt:height]} event:@"videoFrameOptions:"];
-    // 
+#endif
+    
 }
 /*/
 

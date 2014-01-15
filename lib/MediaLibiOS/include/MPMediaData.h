@@ -115,7 +115,7 @@ enum mp_audio_pcm_type
 @end
 
 @protocol MPIMediaEncoder <NSObject>
--(int)setupStream:(id)stream  video:(MPVideoCodec)videoCodecID audio:(MPAudioCodec)audioCodecID;
+-(int)setupStream:(id)stream  video:(MPVideoCodec)videoCodecID audio:(MPAudioCodec)audioCodecID orientation:(AVCaptureVideoOrientation)orientation resolution:(MPVideoResolution)resolution videoBitrate:(uint)videoBitrate;
 -(void)cleanupStream;
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts;
