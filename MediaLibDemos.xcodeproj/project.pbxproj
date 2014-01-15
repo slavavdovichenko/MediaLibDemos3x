@@ -28,66 +28,21 @@
 		F90989101869ED0300952AE9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988B91869ED0200952AE9 /* libswscale.a */; };
 		F90989111869ED0300952AE9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988B91869ED0200952AE9 /* libswscale.a */; };
 		F90989121869ED0300952AE9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988B91869ED0200952AE9 /* libswscale.a */; };
-		F90989131869ED0300952AE9 /* libavcodec.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BB1869ED0200952AE9 /* libavcodec.pc */; };
-		F90989141869ED0300952AE9 /* libavcodec.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BB1869ED0200952AE9 /* libavcodec.pc */; };
-		F90989151869ED0300952AE9 /* libavcodec.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BB1869ED0200952AE9 /* libavcodec.pc */; };
-		F90989161869ED0300952AE9 /* libavdevice.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BC1869ED0200952AE9 /* libavdevice.pc */; };
-		F90989171869ED0300952AE9 /* libavdevice.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BC1869ED0200952AE9 /* libavdevice.pc */; };
-		F90989181869ED0300952AE9 /* libavdevice.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BC1869ED0200952AE9 /* libavdevice.pc */; };
-		F90989191869ED0300952AE9 /* libavfilter.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BD1869ED0200952AE9 /* libavfilter.pc */; };
-		F909891A1869ED0300952AE9 /* libavfilter.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BD1869ED0200952AE9 /* libavfilter.pc */; };
-		F909891B1869ED0300952AE9 /* libavfilter.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BD1869ED0200952AE9 /* libavfilter.pc */; };
-		F909891C1869ED0300952AE9 /* libavformat.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BE1869ED0200952AE9 /* libavformat.pc */; };
-		F909891D1869ED0300952AE9 /* libavformat.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BE1869ED0200952AE9 /* libavformat.pc */; };
-		F909891E1869ED0300952AE9 /* libavformat.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BE1869ED0200952AE9 /* libavformat.pc */; };
-		F909891F1869ED0300952AE9 /* libavresample.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BF1869ED0200952AE9 /* libavresample.pc */; };
-		F90989201869ED0300952AE9 /* libavresample.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BF1869ED0200952AE9 /* libavresample.pc */; };
-		F90989211869ED0300952AE9 /* libavresample.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988BF1869ED0200952AE9 /* libavresample.pc */; };
-		F90989221869ED0300952AE9 /* libavutil.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C01869ED0200952AE9 /* libavutil.pc */; };
-		F90989231869ED0300952AE9 /* libavutil.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C01869ED0200952AE9 /* libavutil.pc */; };
-		F90989241869ED0300952AE9 /* libavutil.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C01869ED0200952AE9 /* libavutil.pc */; };
-		F90989251869ED0300952AE9 /* libswscale.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C11869ED0200952AE9 /* libswscale.pc */; };
-		F90989261869ED0300952AE9 /* libswscale.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C11869ED0200952AE9 /* libswscale.pc */; };
-		F90989271869ED0300952AE9 /* libswscale.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988C11869ED0200952AE9 /* libswscale.pc */; };
 		F90989281869ED0300952AE9 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988CA1869ED0200952AE9 /* librtmp.a */; };
 		F90989291869ED0300952AE9 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988CA1869ED0200952AE9 /* librtmp.a */; };
 		F909892A1869ED0300952AE9 /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988CA1869ED0200952AE9 /* librtmp.a */; };
-		F909892B1869ED0300952AE9 /* librtmp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988CC1869ED0200952AE9 /* librtmp.pc */; };
-		F909892C1869ED0300952AE9 /* librtmp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988CC1869ED0200952AE9 /* librtmp.pc */; };
-		F909892D1869ED0300952AE9 /* librtmp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988CC1869ED0200952AE9 /* librtmp.pc */; };
 		F909892E1869ED0300952AE9 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DD1869ED0200952AE9 /* libspeex.a */; };
 		F909892F1869ED0300952AE9 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DD1869ED0200952AE9 /* libspeex.a */; };
 		F90989301869ED0400952AE9 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DD1869ED0200952AE9 /* libspeex.a */; };
 		F90989311869ED0400952AE9 /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DE1869ED0200952AE9 /* libspeexdsp.a */; };
 		F90989321869ED0400952AE9 /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DE1869ED0200952AE9 /* libspeexdsp.a */; };
 		F90989331869ED0400952AE9 /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988DE1869ED0200952AE9 /* libspeexdsp.a */; };
-		F90989341869ED0400952AE9 /* speex.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E01869ED0200952AE9 /* speex.pc */; };
-		F90989351869ED0400952AE9 /* speex.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E01869ED0200952AE9 /* speex.pc */; };
-		F90989361869ED0400952AE9 /* speex.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E01869ED0200952AE9 /* speex.pc */; };
-		F90989371869ED0400952AE9 /* speexdsp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E11869ED0200952AE9 /* speexdsp.pc */; };
-		F90989381869ED0400952AE9 /* speexdsp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E11869ED0200952AE9 /* speexdsp.pc */; };
-		F90989391869ED0400952AE9 /* speexdsp.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988E11869ED0200952AE9 /* speexdsp.pc */; };
-		F909893A1869ED0400952AE9 /* speex.m4 in Resources */ = {isa = PBXBuildFile; fileRef = F90988E41869ED0200952AE9 /* speex.m4 */; };
-		F909893B1869ED0400952AE9 /* speex.m4 in Resources */ = {isa = PBXBuildFile; fileRef = F90988E41869ED0200952AE9 /* speex.m4 */; };
-		F909893C1869ED0400952AE9 /* speex.m4 in Resources */ = {isa = PBXBuildFile; fileRef = F90988E41869ED0200952AE9 /* speex.m4 */; };
-		F909893D1869ED0400952AE9 /* manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F90988E71869ED0200952AE9 /* manual.pdf */; };
-		F909893E1869ED0400952AE9 /* manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F90988E71869ED0200952AE9 /* manual.pdf */; };
-		F909893F1869ED0400952AE9 /* manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F90988E71869ED0200952AE9 /* manual.pdf */; };
 		F90989401869ED0400952AE9 /* libvo-aacenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988F31869ED0200952AE9 /* libvo-aacenc.a */; };
 		F90989411869ED0400952AE9 /* libvo-aacenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988F31869ED0200952AE9 /* libvo-aacenc.a */; };
 		F90989421869ED0400952AE9 /* libvo-aacenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988F31869ED0200952AE9 /* libvo-aacenc.a */; };
-		F90989431869ED0400952AE9 /* vo-aacenc.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988F51869ED0200952AE9 /* vo-aacenc.pc */; };
-		F90989441869ED0400952AE9 /* vo-aacenc.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988F51869ED0200952AE9 /* vo-aacenc.pc */; };
-		F90989451869ED0400952AE9 /* vo-aacenc.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988F51869ED0200952AE9 /* vo-aacenc.pc */; };
 		F90989461869ED0400952AE9 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988FB1869ED0200952AE9 /* libx264.a */; };
 		F90989471869ED0400952AE9 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988FB1869ED0200952AE9 /* libx264.a */; };
 		F90989481869ED0400952AE9 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90988FB1869ED0200952AE9 /* libx264.a */; };
-		F90989491869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
-		F909894A1869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
-		F909894B1869ED0400952AE9 /* x264.pc in Resources */ = {isa = PBXBuildFile; fileRef = F90988FD1869ED0200952AE9 /* x264.pc */; };
-		F946A75E186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
-		F946A75F186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
-		F946A760186C6D2C009E66DE /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F946A75D186C6D2C009E66DE /* license.bin */; };
 		F97C89161705810B00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89171705811500F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89181705811E00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
@@ -140,8 +95,6 @@
 		F9F703261652641D004FCA9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9F703241652641D004FCA9B /* InfoPlist.strings */; };
 		F9F703281652641D004FCA9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F703271652641D004FCA9B /* main.m */; };
 		F9F7032C1652641D004FCA9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F7032B1652641D004FCA9B /* AppDelegate.m */; };
-		F9F7032E1652641D004FCA9B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7032D1652641D004FCA9B /* Default.png */; };
-		F9F703301652641D004FCA9B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7032F1652641D004FCA9B /* Default@2x.png */; };
 		F9F703321652641D004FCA9B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F703311652641D004FCA9B /* Default-568h@2x.png */; };
 		F9F703351652641D004FCA9B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F703331652641D004FCA9B /* MainStoryboard_iPhone.storyboard */; };
 		F9F703381652641D004FCA9B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F703361652641D004FCA9B /* MainStoryboard_iPad.storyboard */; };
@@ -278,7 +231,6 @@
 		F90988FB1869ED0200952AE9 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
 		F90988FD1869ED0200952AE9 /* x264.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = x264.pc; sourceTree = "<group>"; };
 		F9215AFB18116B5000748EBB /* MPMediaDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaDecoder.h; sourceTree = "<group>"; };
-		F946A75D186C6D2C009E66DE /* license.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = license.bin; sourceTree = "<group>"; };
 		F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F97C8914170580EC00F0B611 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F97CF4E91810023D00564C37 /* MPMediaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaData.h; sourceTree = "<group>"; };
@@ -851,15 +803,6 @@
 			path = pkgconfig;
 			sourceTree = "<group>";
 		};
-		F946A75C186C6D2B009E66DE /* com.themidnightcoders.license */ = {
-			isa = PBXGroup;
-			children = (
-				F946A75D186C6D2C009E66DE /* license.bin */,
-			);
-			name = com.themidnightcoders.license;
-			path = ../../WebORBiOS/CommLibiOS/com.themidnightcoders.license;
-			sourceTree = "<group>";
-		};
 		F988F2AD15AD843C0083CB14 /* RTMPStreamPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,7 +831,6 @@
 		F9BBFA1614A49BA500C5B39B = {
 			isa = PBXGroup;
 			children = (
-				F946A75C186C6D2B009E66DE /* com.themidnightcoders.license */,
 				F9F3EDB8161070D200B0EA20 /* art */,
 				F9BBFA8714A49D0C00C5B39B /* lib */,
 				F9F6992515AC5D01004B6F37 /* RTMPStreamPublisher */,
@@ -1172,25 +1114,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90989201869ED0300952AE9 /* libavresample.pc in Resources */,
 				F988F2B215AD843C0083CB14 /* InfoPlist.strings in Resources */,
-				F90989351869ED0400952AE9 /* speex.pc in Resources */,
-				F90989381869ED0400952AE9 /* speexdsp.pc in Resources */,
-				F909892C1869ED0300952AE9 /* librtmp.pc in Resources */,
 				F988F2BB15AD843C0083CB14 /* MainStoryboard_iPhone.storyboard in Resources */,
-				F909893E1869ED0400952AE9 /* manual.pdf in Resources */,
-				F90989141869ED0300952AE9 /* libavcodec.pc in Resources */,
-				F909891A1869ED0300952AE9 /* libavfilter.pc in Resources */,
 				F988F2BE15AD843C0083CB14 /* MainStoryboard_iPad.storyboard in Resources */,
-				F90989231869ED0300952AE9 /* libavutil.pc in Resources */,
-				F90989261869ED0300952AE9 /* libswscale.pc in Resources */,
 				F9F3EDBB161070D200B0EA20 /* Default-568h@2x.png in Resources */,
-				F909893B1869ED0400952AE9 /* speex.m4 in Resources */,
-				F90989441869ED0400952AE9 /* vo-aacenc.pc in Resources */,
-				F90989171869ED0300952AE9 /* libavdevice.pc in Resources */,
-				F946A75F186C6D2C009E66DE /* license.bin in Resources */,
-				F909894A1869ED0400952AE9 /* x264.pc in Resources */,
-				F909891D1869ED0300952AE9 /* libavformat.pc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1198,25 +1125,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F909891F1869ED0300952AE9 /* libavresample.pc in Resources */,
 				F9F6992A15AC5D01004B6F37 /* InfoPlist.strings in Resources */,
-				F90989341869ED0400952AE9 /* speex.pc in Resources */,
-				F90989371869ED0400952AE9 /* speexdsp.pc in Resources */,
-				F909892B1869ED0300952AE9 /* librtmp.pc in Resources */,
 				F9F6993315AC5D01004B6F37 /* MainStoryboard_iPhone.storyboard in Resources */,
-				F909893D1869ED0400952AE9 /* manual.pdf in Resources */,
-				F90989131869ED0300952AE9 /* libavcodec.pc in Resources */,
-				F90989191869ED0300952AE9 /* libavfilter.pc in Resources */,
 				F9F6993615AC5D01004B6F37 /* MainStoryboard_iPad.storyboard in Resources */,
-				F90989221869ED0300952AE9 /* libavutil.pc in Resources */,
-				F90989251869ED0300952AE9 /* libswscale.pc in Resources */,
 				F9F3EDBA161070D200B0EA20 /* Default-568h@2x.png in Resources */,
-				F909893A1869ED0400952AE9 /* speex.m4 in Resources */,
-				F90989431869ED0400952AE9 /* vo-aacenc.pc in Resources */,
-				F90989161869ED0300952AE9 /* libavdevice.pc in Resources */,
-				F946A75E186C6D2C009E66DE /* license.bin in Resources */,
-				F90989491869ED0400952AE9 /* x264.pc in Resources */,
-				F909891C1869ED0300952AE9 /* libavformat.pc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,27 +1136,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F909894B1869ED0400952AE9 /* x264.pc in Resources */,
-				F909893F1869ED0400952AE9 /* manual.pdf in Resources */,
 				F9F703261652641D004FCA9B /* InfoPlist.strings in Resources */,
-				F909891E1869ED0300952AE9 /* libavformat.pc in Resources */,
-				F909891B1869ED0300952AE9 /* libavfilter.pc in Resources */,
-				F90989271869ED0300952AE9 /* libswscale.pc in Resources */,
-				F9F7032E1652641D004FCA9B /* Default.png in Resources */,
-				F90989241869ED0300952AE9 /* libavutil.pc in Resources */,
-				F90989211869ED0300952AE9 /* libavresample.pc in Resources */,
-				F90989151869ED0300952AE9 /* libavcodec.pc in Resources */,
-				F9F703301652641D004FCA9B /* Default@2x.png in Resources */,
 				F9F703321652641D004FCA9B /* Default-568h@2x.png in Resources */,
 				F9F703351652641D004FCA9B /* MainStoryboard_iPhone.storyboard in Resources */,
-				F909892D1869ED0300952AE9 /* librtmp.pc in Resources */,
-				F909893C1869ED0400952AE9 /* speex.m4 in Resources */,
-				F946A760186C6D2C009E66DE /* license.bin in Resources */,
 				F9F703381652641D004FCA9B /* MainStoryboard_iPad.storyboard in Resources */,
-				F90989181869ED0300952AE9 /* libavdevice.pc in Resources */,
-				F90989361869ED0400952AE9 /* speex.pc in Resources */,
-				F90989391869ED0400952AE9 /* speexdsp.pc in Resources */,
-				F90989451869ED0400952AE9 /* vo-aacenc.pc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
