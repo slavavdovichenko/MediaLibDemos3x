@@ -50,7 +50,6 @@
     
     //echoCancellationOff;
     
-    //hostTextField.text = @"rtmp://demo.eudata.biz:1935/wcc"; // crtmp
     //hostTextField.text = @"rtmp://80.74.155.7/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
@@ -100,6 +99,7 @@
 -(void)doConnect {
     
     resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
     
 #if 1 // use inside RTMPClient instance
     
@@ -132,14 +132,13 @@
     //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
     upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
-    //[upstream setVideoBitrate:512000];
-    //[upstream setVideoResolution:RESOLUTION_MEDIUM];
+    //[upstream setVideoBitrate:72000];
     
     //orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
     //orientation = VCaptureVideoOrientationLandscapeRight;
-    //orientation = AVCaptureVideoOrientationLandscapeLeft;
-    orientation = orientation % AVCaptureVideoOrientationLandscapeLeft + 1;
+    orientation = AVCaptureVideoOrientationLandscapeLeft;
+    //orientation = orientation % AVCaptureVideoOrientationLandscapeLeft + 1;
     [upstream setVideoOrientation:orientation];
     
     [upstream stream:streamTextField.text publishType:PUBLISH_LIVE];

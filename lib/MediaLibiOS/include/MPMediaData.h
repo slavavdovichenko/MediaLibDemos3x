@@ -119,4 +119,5 @@ enum mp_audio_pcm_type
 -(void)cleanupStream;
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts;
+-(void)sendVideoFrame:(MPMediaData *)data;
 @end
