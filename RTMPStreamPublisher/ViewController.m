@@ -55,8 +55,8 @@
     //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/videorecording";
-    //hostTextField.text = @"rtmp://192.168.1.103:1935/live";
-    hostTextField.text = @"rtmp://192.168.2.103:1935/live";
+    hostTextField.text = @"rtmp://192.168.1.102:1935/live";
+    //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
 
     streamTextField.text = @"slavav2";
@@ -81,7 +81,11 @@
 // MEMORY
 
 -(void)sizeMemory:(NSNumber *)memory {
+#if 0
     memoryLabel.text = [NSString stringWithFormat:@"%d", [memory intValue]];
+#else
+    memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream.encoder getCurrentFPS]];
+#endif
 }
 
 // ALERT
@@ -98,14 +102,14 @@
 
 -(void)doConnect {
     
-    resolution = RESOLUTION_LOW;
-    //resolution = RESOLUTION_CIF;
+    //resolution = RESOLUTION_LOW;
+    resolution = RESOLUTION_MEDIUM;
     
-#if 1 // use inside RTMPClient instance
+#if 0 // use inside RTMPClient instance
     
-    upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
+    //upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:hostTextField.text];
-    //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
+    upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
 
 #else // use outside RTMPClient instance
     
@@ -129,8 +133,8 @@
     upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     
     //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
-    //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
-    upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
+    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
     //[upstream setVideoBitrate:72000];
     
@@ -263,9 +267,9 @@
         case STREAM_PLAYING: {
            
             //[self sendMetadata];
-            
+#if 1
             [upstream setPreviewLayer:previewView];
-            
+#endif
             hostTextField.hidden = YES;
             streamTextField.hidden = YES;
             previewView.hidden = NO;
