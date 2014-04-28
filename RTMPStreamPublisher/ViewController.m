@@ -50,16 +50,16 @@
     
     //echoCancellationOff;
     
-    //hostTextField.text = @"rtmp://80.74.155.7/live";
+    hostTextField.text = @"rtmp://80.74.155.7/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/videorecording";
-    hostTextField.text = @"rtmp://192.168.1.102:1935/live";
+    //hostTextField.text = @"rtmp://192.168.1.102:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
 
-    streamTextField.text = @"slavav2";
+    streamTextField.text = @"slavav3";
     //streamTextField.text = @"outgoingaudio_c109";
     //streamTextField.text = @"myStream";
 	streamTextField.delegate = self;
@@ -102,8 +102,8 @@
 
 -(void)doConnect {
     
-    //resolution = RESOLUTION_LOW;
-    resolution = RESOLUTION_MEDIUM;
+    resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_MEDIUM;
     
 #if 0 // use inside RTMPClient instance
     

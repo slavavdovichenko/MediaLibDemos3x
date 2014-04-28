@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define UNKNOWN_FAULT [Fault fault:@"Unknown fault"  detail:@"Unknown fault" faultCode:@"-9999"]
+
 @interface Fault : NSObject {
     NSString    *message;
     NSString    *detail;

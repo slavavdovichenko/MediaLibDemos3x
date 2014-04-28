@@ -24,6 +24,8 @@
 
 // Singleton accessor:  this is how you should ALWAYS get a reference to the class instance.  Never init your own. 
 +(Types *)sharedInstance;
+// managed objects support
+-(BOOL)isManagedObjectSupport;
 // type mapping
 -(void)addAbstractClassMapping:(Class)abstractType mapped:(Class)mappedType;
 -(Class)getAbstractClassMapping:(Class)type;
@@ -54,8 +56,8 @@
 @end
 
 @interface NSObject (AMF)
--(void)onAMFSerialaize;
--(void)onAMFDeserialaze;
+-(id)onAMFSerialize;
+-(id)onAMFDeserialize;
 @end
 
 @interface NSString (Chars)
@@ -64,6 +66,7 @@
 @end
 
 @interface NSObject (Properties)
+-(BOOL)isPropertyResolved:(NSString *)name;
 -(BOOL)resolveProperty:(NSString *)name;
 -(BOOL)resolveProperty:(NSString *)name value:(id)value;
 @end

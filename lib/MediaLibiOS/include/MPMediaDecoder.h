@@ -31,4 +31,5 @@
 
 -(void)setupStream:(id)stream;
 -(void)cleanupStream;
+-(int)getPendingFrames;
 @end
