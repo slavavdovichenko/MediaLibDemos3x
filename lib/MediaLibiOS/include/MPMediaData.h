@@ -77,9 +77,11 @@ enum mp_publish_type
 typedef enum mp_audio_pcm_type MPAudioPCMType;
 enum mp_audio_pcm_type
 {
+	MP_AUDIO_PCM_U8,
 	MP_AUDIO_PCM_S16,
 	MP_AUDIO_PCM_S32,
 	MP_AUDIO_PCM_FLT,
+	MP_AUDIO_PCM_DBL,
 };
 
 @interface MPMediaData : NSObject
