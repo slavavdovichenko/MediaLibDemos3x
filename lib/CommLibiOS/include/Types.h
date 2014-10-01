@@ -32,9 +32,12 @@
 -(void)addClientClassMapping:(NSString *)clientClass mapped:(Class)mappedServerType;
 -(Class)getServerTypeForClientClass:(NSString *)clientClass;
 -(NSString *)getClientClassForServerType:(NSString *)serverClassName;
+-(NSString *)objectMappedClassName:(id)obj;
+-(NSString *)typeMappedClassName:(Class)type;
 // type reflection
 +(NSString *)objectClassName:(id)obj;
 +(NSString *)typeClassName:(Class)type;
++(NSString *)insideTypeClassName:(Class)type;
 +(id)classInstance:(Class)type;
 +(Class)classByName:(NSString *)className;
 +(id)classInstanceByClassName:(NSString *)className;
@@ -43,6 +46,10 @@
 +(NSArray *)propertyAttributes:(id)obj;
 +(NSDictionary *)propertyKeysWithAttributes:(id)obj;
 +(NSDictionary *)propertyDictionary:(id)obj;
+//target/plist options 
++(NSString *)targetName;
++(NSDictionary *)getInfoPlist;
++(id)getInfoPlist:(NSString *)key;
 @end
 
 @interface NSDictionary (Class)
@@ -67,6 +74,7 @@
 
 @interface NSObject (Properties)
 -(BOOL)isPropertyResolved:(NSString *)name;
+-(BOOL)getPropertyIfResolved:(NSString *)name value:(id *)value;
 -(BOOL)resolveProperty:(NSString *)name;
 -(BOOL)resolveProperty:(NSString *)name value:(id)value;
 @end

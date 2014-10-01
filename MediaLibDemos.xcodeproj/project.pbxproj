@@ -70,7 +70,6 @@
 		F988F2C515AD844A0083CB14 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */; };
 		F988F2C615AD84540083CB14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB314A49E2400C5B39B /* AudioToolbox.framework */; };
 		F988F2C715AD84570083CB14 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB414A49E2400C5B39B /* AVFoundation.framework */; };
-		F988F2C815AD84730083CB14 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB514A49E2400C5B39B /* CoreFoundation.framework */; };
 		F988F2C915AD847A0083CB14 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB614A49E2400C5B39B /* CoreMedia.framework */; };
 		F988F2CA15AD847C0083CB14 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB714A49E2400C5B39B /* CoreVideo.framework */; };
 		F988F2CB15AD847E0083CB14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB914A49E2400C5B39B /* Security.framework */; };
@@ -89,7 +88,6 @@
 		F9F6993E15AC5FA3004B6F37 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */; };
 		F9F6993F15AC5FAE004B6F37 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB314A49E2400C5B39B /* AudioToolbox.framework */; };
 		F9F6994015AC5FB2004B6F37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB414A49E2400C5B39B /* AVFoundation.framework */; };
-		F9F6994115AC5FB7004B6F37 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB514A49E2400C5B39B /* CoreFoundation.framework */; };
 		F9F6994215AC5FB9004B6F37 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB614A49E2400C5B39B /* CoreMedia.framework */; };
 		F9F6994315AC5FBD004B6F37 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB714A49E2400C5B39B /* CoreVideo.framework */; };
 		F9F6994415AC5FC0004B6F37 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB914A49E2400C5B39B /* Security.framework */; };
@@ -107,7 +105,6 @@
 		F9F703401652646B004FCA9B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */; };
 		F9F7034116526472004FCA9B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB314A49E2400C5B39B /* AudioToolbox.framework */; };
 		F9F7034216526476004FCA9B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB414A49E2400C5B39B /* AVFoundation.framework */; };
-		F9F703431652647A004FCA9B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB514A49E2400C5B39B /* CoreFoundation.framework */; };
 		F9F703441652647D004FCA9B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB614A49E2400C5B39B /* CoreMedia.framework */; };
 		F9F7034516526481004FCA9B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB714A49E2400C5B39B /* CoreVideo.framework */; };
 		F9F7034616526484004FCA9B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB914A49E2400C5B39B /* Security.framework */; };
@@ -325,7 +322,6 @@
 				D3A18EED190EAAA000A249BA /* libswscale.a in Frameworks */,
 				D316A775190A71C2007E2610 /* MediaLibiOS.a in Frameworks */,
 				D3A18EEA190EAAA000A249BA /* libswresample.a in Frameworks */,
-				F988F2C815AD84730083CB14 /* CoreFoundation.framework in Frameworks */,
 				F988F2C915AD847A0083CB14 /* CoreMedia.framework in Frameworks */,
 				D316A822190A89A8007E2610 /* libspeexdsp.a in Frameworks */,
 				F988F2CA15AD847C0083CB14 /* CoreVideo.framework in Frameworks */,
@@ -356,7 +352,6 @@
 				D3A18EEC190EAAA000A249BA /* libswscale.a in Frameworks */,
 				D316A774190A71C2007E2610 /* MediaLibiOS.a in Frameworks */,
 				D3A18EE9190EAA9F00A249BA /* libswresample.a in Frameworks */,
-				F9F6994115AC5FB7004B6F37 /* CoreFoundation.framework in Frameworks */,
 				F9F6994215AC5FB9004B6F37 /* CoreMedia.framework in Frameworks */,
 				D316A821190A89A8007E2610 /* libspeexdsp.a in Frameworks */,
 				F9F6994315AC5FBD004B6F37 /* CoreVideo.framework in Frameworks */,
@@ -387,7 +382,6 @@
 				D3A18EEE190EAAA000A249BA /* libswscale.a in Frameworks */,
 				D316A776190A71C2007E2610 /* MediaLibiOS.a in Frameworks */,
 				D3A18EEB190EAAA000A249BA /* libswresample.a in Frameworks */,
-				F9F703431652647A004FCA9B /* CoreFoundation.framework in Frameworks */,
 				F9F703441652647D004FCA9B /* CoreMedia.framework in Frameworks */,
 				D316A823190A89A8007E2610 /* libspeexdsp.a in Frameworks */,
 				F9F7034616526484004FCA9B /* Security.framework in Frameworks */,

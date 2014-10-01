@@ -18,12 +18,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 #import <CoreVideo/CoreVideo.h>
+#import "MPMediaData.h"
 
-@protocol IVideoPlayer, IAudioPlayer;
+@protocol IVideoPlayer, IAudioPlayer, MPIMediaStreamEvent;
 
 @interface MPMediaDecoder : NSObject
+
+@property (nonatomic, assign) id <MPIMediaStreamEvent> delegate;
 @property (nonatomic, retain) id <IVideoPlayer> video;
 @property (nonatomic, retain) id <IAudioPlayer> audio;
+@property (readonly) MPMediaStreamState state;
 @property CGFloat scale;
 @property UIImageOrientation orientation;
 
@@ -32,4 +36,5 @@
 -(void)setupStream:(id)stream;
 -(void)cleanupStream;
 -(int)getPendingFrames;
+
 @end

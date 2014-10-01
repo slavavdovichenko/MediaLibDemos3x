@@ -55,11 +55,11 @@
     //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/videorecording";
-    hostTextField.text = @"rtmp://192.168.1.102:1935/live";
+    hostTextField.text = @"rtmp://192.168.1.105:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
 
-    streamTextField.text = @"slavav3";
+    streamTextField.text = @"slavav7";
     //streamTextField.text = @"outgoingaudio_c109";
     //streamTextField.text = @"myStream";
 	streamTextField.delegate = self;
@@ -84,7 +84,8 @@
 #if 0
     memoryLabel.text = [NSString stringWithFormat:@"%d", [memory intValue]];
 #else
-    memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream.encoder getCurrentFPS]];
+    memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream getMeanFPS]];
+    //memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream.encoder getCurrentFPS]];
 #endif
 }
 
@@ -102,8 +103,11 @@
 
 -(void)doConnect {
     
-    resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
+    resolution = RESOLUTION_VGA;
+    //resolution = RESOLUTION_HIGH;
     
 #if 0 // use inside RTMPClient instance
     
@@ -140,7 +144,7 @@
     
     //orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
-    //orientation = VCaptureVideoOrientationLandscapeRight;
+    //orientation = AVCaptureVideoOrientationLandscapeRight;
     orientation = AVCaptureVideoOrientationLandscapeLeft;
     //orientation = orientation % AVCaptureVideoOrientationLandscapeLeft + 1;
     [upstream setVideoOrientation:orientation];

@@ -68,14 +68,20 @@ enum audio_mode
 -(void)teardownPreviewLayer;
 -(void)switchCameras;
 -(AVCaptureSession *)getCaptureSession;
+-(int)getPendingVideoFrames;
+-(double)getMeanFPS;
 
 -(BOOL)setAudioMode:(AudioMode)mode;
 
 -(BOOL)connect:(NSString *)url name:(NSString *)name publishType:(MPMediaPublishType)type;
 -(BOOL)attach:(RTMPClient *)client name:(NSString *)name publishType:(MPMediaPublishType)type;
 -(BOOL)stream:(NSString *)name publishType:(MPMediaPublishType)type;
+#if IS_MEDIA_ENCODER
 -(BOOL)sendFrame:(CVPixelBufferRef)pixelBuffer timestamp:(int64_t)timestamp;
 -(BOOL)sendFrame:(CVPixelBufferRef)pixelBuffer timestamp:(int64_t)timestamp pts:(CMTime)pts duration:(CMTime)duration;
+#else
+-(BOOL)sendFrame:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp;
+#endif
 -(BOOL)sendSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 -(void)sendMetadata:(NSDictionary *)data;
 -(void)sendMetadata:(NSDictionary *)data event:(NSString *)event;

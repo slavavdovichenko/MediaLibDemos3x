@@ -55,11 +55,11 @@
     //hostTextField.text = @"rtmp://10.0.1.33:1935/vod";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/vod";
-    hostTextField.text = @"rtmp://192.168.1.102:1935/live";
+    hostTextField.text = @"rtmp://192.168.1.105:1935/live";
     //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
     
-    streamTextField.text = @"slavav3";
+    streamTextField.text = @"slavav7";
     //streamTextField.text = @"mediaencoder";
     //streamTextField.text = @"outgoingaudio_c109";
     //streamTextField.text = @"incomingaudio_1111";
@@ -101,11 +101,13 @@
 #if 1 // ------------------ use MPMediaDecoder
     
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
-    //decoder.orientation = UIImageOrientationRightMirrored;
+    decoder.delegate = self;
+    
+    //decoder.orientation = UIImageOrientationUp;
     //decoder.scale = 0.5f;
+    
     [decoder setupStream:[NSString stringWithFormat:@"%@/%@", hostTextField.text, streamTextField.text]];
 
-    previewView.hidden = NO;
     btnConnect.title = @"Disconnect";
     
     return;
@@ -115,8 +117,8 @@
     // --------------------- use RTMPClient
     
     FramesPlayer *framesPlayer = [[FramesPlayer alloc] initWithView:previewView];
-    framesPlayer.orientation = UIImageOrientationRight;
-    //framesPlayer.orientation = UIImageOrientationLeft;
+    //framesPlayer.orientation = UIImageOrientationRight;
+    framesPlayer.orientation = UIImageOrientationLeft;
     
 #if 1 // use inside RTMPClient instance
     
@@ -244,6 +246,7 @@
             if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
                 
                 [player stop];
+                [self connectControl:nil];
                 [self showAlert:description];
                 
                 break;
@@ -263,7 +266,7 @@
     
     NSLog(@" $$$$$$ <MPIMediaStreamEvent> connectFailedEvent: %d = %@ [%@]", code, description, [NSThread isMainThread]?@"M":@"T");
     
-    if (!player)
+    if (!player && !decoder)
         return;
     
     [self setDisconnect];
