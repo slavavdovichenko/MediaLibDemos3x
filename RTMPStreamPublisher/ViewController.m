@@ -50,7 +50,6 @@
     
     //echoCancellationOff;
     
-    //hostTextField.text = @"rtmp://80.74.155.7/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/live";
     //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
     //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
@@ -107,7 +106,6 @@
     //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
     resolution = RESOLUTION_VGA;
-    //resolution = RESOLUTION_HIGH;
     
 #if 0 // use inside RTMPClient instance
     
@@ -270,10 +268,8 @@
             
         case STREAM_PLAYING: {
            
-            //[self sendMetadata];
-#if 1
             [upstream setPreviewLayer:previewView];
-#endif
+
             hostTextField.hidden = YES;
             streamTextField.hidden = YES;
             previewView.hidden = NO;

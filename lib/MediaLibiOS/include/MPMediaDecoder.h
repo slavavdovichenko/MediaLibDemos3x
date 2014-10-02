@@ -28,6 +28,8 @@
 @property (nonatomic, retain) id <IVideoPlayer> video;
 @property (nonatomic, retain) id <IAudioPlayer> audio;
 @property (readonly) MPMediaStreamState state;
+@property (readonly) int videoCodecId;
+@property (readonly) int audioCodecId;
 @property CGFloat scale;
 @property UIImageOrientation orientation;
 
