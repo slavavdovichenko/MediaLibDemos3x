@@ -10,10 +10,6 @@
 #import "MPMediaData.h"
 #import "RTMPClient.h"
 
-#define isEchoCancellation [MediaStreamPlayer getEchoCancellationOn]
-#define echoCancellationOn [MediaStreamPlayer setEchoCancellationOn:YES]
-#define echoCancellationOff [MediaStreamPlayer setEchoCancellationOn:NO]
-
 @protocol IVideoPlayer;
 @class VideoStream, SysTimer, NellyMoserDecoder;
 
@@ -25,9 +21,6 @@
 
 -(id)init:(NSString *)url;
 -(id)initWithClient:(RTMPClient *)client;
-
-+(void)setEchoCancellationOn:(BOOL)isOn;
-+(BOOL)getEchoCancellationOn;
 
 -(BOOL)connect:(NSString *)url name:(NSString *)name;
 -(BOOL)attach:(RTMPClient *)client name:(NSString *)name;

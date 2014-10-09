@@ -9,10 +9,12 @@
 #define IS_MEDIA_ENCODER 1
 
 #import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
-#import <CoreVideo/CoreVideo.h>
+
+#define isEchoCancellation [MPMediaData getEchoCancellationOn]
+#define echoCancellationOn [MPMediaData setEchoCancellationOn:YES]
+#define echoCancellationOff [MPMediaData setEchoCancellationOn:NO]
 
 #define MP_RTMP_CLIENT_IS_CONNECTED @"RTMP.Client.isConnected"
 #define MP_RTMP_CLIENT_STREAM_IS_CREATED @"RTMP.Client.Stream.isCreated"
@@ -47,7 +49,6 @@ enum mp_media_channel_id
     VIDEO_CHANNEL_ID = 8,
     AUDIO_CHANNEL_ID = 9,
 };
-
 
 typedef enum mp_media_stream_state MPMediaStreamState;
 enum mp_media_stream_state
@@ -109,6 +110,8 @@ enum mp_audio_pcm_type
 -(id)initWithData:(uint8_t *)data size:(size_t)size timestamp:(uint)timestamp;
 #endif
 
++(void)setEchoCancellationOn:(BOOL)isOn;
++(BOOL)getEchoCancellationOn;
 +(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType;
 +(void)setAVAudioSessionCategoryPlayAndRecord:(AVAudioSessionCategoryOptions)options;
 @end

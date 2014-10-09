@@ -27,9 +27,12 @@
 @property (nonatomic, assign) id <MPIMediaStreamEvent> delegate;
 @property (nonatomic, retain) id <IVideoPlayer> video;
 @property (nonatomic, retain) id <IAudioPlayer> audio;
+@property (nonatomic, retain) NSArray *parameters;
 @property (readonly) MPMediaStreamState state;
 @property (readonly) int videoCodecId;
 @property (readonly) int audioCodecId;
+@property BOOL isRealTime;
+@property uint clientBufferMs;
 @property CGFloat scale;
 @property UIImageOrientation orientation;
 

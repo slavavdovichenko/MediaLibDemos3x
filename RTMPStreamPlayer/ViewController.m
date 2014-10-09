@@ -94,6 +94,7 @@
     
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
     decoder.delegate = self;
+    decoder.isRealTime = YES;
     
     //decoder.orientation = UIImageOrientationUp;
     //decoder.scale = 0.5f;
