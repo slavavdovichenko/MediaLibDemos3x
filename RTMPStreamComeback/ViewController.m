@@ -3,7 +3,7 @@
 //  RTMPStreamComeback
 //
 //  Created by Vyacheslav Vdovichenko on 11/13/12.
-//  Copyright (c) 2012 The Midnight Coders, Inc. All rights reserved.
+//  Copyright (c) 2014 The Midnight Coders, Inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -11,42 +11,34 @@
 #import "DEBUG.h"
 #import "MemoryTicker.h"
 #import "BroadcastStreamClient.h"
-#import "MediaStreamPlayer.h"
-#import "VideoPlayer.h"
-#import "MPMediaEncoder.h"
 #import "MPMediaDecoder.h"
 
+#define IS_CROSS_STREAMS 0
 
-//static NSString *host = @"rtmp://10.0.1.33:1935/live";
-//static NSString *host = @"rtmp://192.168.2.63:1935/live";
-//static NSString *host = @"rtmp://192.168.2.101:1935/live";
-static NSString *host = @"rtmp://192.168.1.102:1935/live";
-//static NSString *host = @"rtmp://192.168.2.101:1935/live";
-//static NSString *host = @"rtmp://80.74.155.7/live";
+// ON/OFF cross streams mode
+#if IS_CROSS_STREAMS
+static BOOL isCrossStreams = YES;   // Makes video chat (two separate streams) between iPhone and iPad devices
+#else
+static BOOL isCrossStreams = NO;    // Makes output & input streams on the one device
+#endif
 
-//static NSString *stream = @"outgoingaudio_c11";
-//static NSString *stream = @"myStream";
-static NSString *stream = @"slavav";
-
-// cross stream mode
-static BOOL isCrossStreams = NO;
-//static BOOL isCrossStreams = YES;
+static NSString *host = @"rtmp://192.168.1.105:1935/live";
+static NSString *stream = @"teststream";
 
 
 @interface ViewController () <MPIMediaStreamEvent> {
     
     MemoryTicker            *memoryTicker;
-    FramesPlayer            *screen;
-    
-    RTMPClient              *socket;
+
     BroadcastStreamClient   *upstream;
-    MediaStreamPlayer       *player;
-    
     MPMediaDecoder          *decoder;
+    
+    MPVideoResolution       resolution;
+    AVCaptureVideoOrientation orientation;
     
     int                     upstreamCross;
     int                     downstreamCross;
-    
+
     UIActivityIndicatorView *netActivity;
 }
 
@@ -69,24 +61,20 @@ static BOOL isCrossStreams = NO;
     memoryTicker = [[MemoryTicker alloc] initWithResponder:self andMethod:@selector(sizeMemory:)];
     memoryTicker.asNumber = YES;
 
-    socket = nil;
     upstream = nil;
-    player = nil;
-    
     decoder = nil;
     
-    //echoCancellationOff;
+    // isPad fixes kind of device: iPad (YES) or iPhone (NO)
+    BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
     
-    upstreamCross = isCrossStreams ? ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 2 : 1) : 0;
-    downstreamCross = isCrossStreams ? ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 1 : 2) : 0;
-	
+    // if isCrossStreams - makes 'teststream1' & 'teststream2' cross streams, else - one 'teststream0' stream for output & input
+    upstreamCross = isCrossStreams? isPad? 2 :1 :0;
+    downstreamCross = isCrossStreams? isPad? 1 :2 :0;
+
 	// Create and add the activity indicator
-	netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	netActivity.center = CGPointMake(160.0f, 200.0f);
+	netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:isPad?UIActivityIndicatorViewStyleGray:UIActivityIndicatorViewStyleWhiteLarge];
+	netActivity.center = isPad? CGPointMake(400.0f, 480.0f) : CGPointMake(160.0f, 240.0f);
 	[self.view addSubview:netActivity];
-    
-    // setup the simultaneous record and playback
-    //[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -119,74 +107,57 @@ static BOOL isCrossStreams = NO;
 
 -(void)doConnect {
     
-    NSString *name = [NSString stringWithFormat:@"%@%d", stream, upstreamCross];
-    
-    MPVideoResolution resolution = RESOLUTION_LOW;
-    
-#if 1 // use inside RTMPClient instance
+    //resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
+    resolution = RESOLUTION_MEDIUM;
+    //resolution = RESOLUTION_VGA;
     
     upstream = [[BroadcastStreamClient alloc] init:host resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:host];
     //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:resolution];
     
-#else // use outside RTMPClient instance
-    
-    if (!socket) {
-        socket = [[RTMPClient alloc] init:host];
-        if (!socket) {
-            [self showAlert:@"Socket has not be created"];
-            return;
-        }
-        
-        [socket spawnSocketThread];
-    }
-    
-    upstream = [[BroadcastStreamClient alloc] initWithClient:socket resolution:RESOLUTION_LOW];
-    //upstream = [[BroadcastStreamClient alloc] initOnlyAudioWithClient:socket];
-    //upstream = [[BroadcastStreamClient alloc] initOnlyVideoWithClient:socket resolution:RESOLUTION_LOW];
-    //[upstream setVideoBitrate:32000];
-    
-#endif
     
     upstream.delegate = self;
+    
+    //upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
+    upstream.videoCodecId = MP_VIDEO_CODEC_H264;
+    
+    //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
+    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
+    
+    //[upstream setVideoBitrate:72000];
+    
+    orientation = AVCaptureVideoOrientationPortrait;
+    //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
+    //orientation = AVCaptureVideoOrientationLandscapeRight;
+    //orientation = AVCaptureVideoOrientationLandscapeLeft;
+    [upstream setVideoOrientation:orientation];
+
+    NSString *name = [NSString stringWithFormat:@"%@%d", stream, upstreamCross];
     [upstream stream:name publishType:PUBLISH_LIVE];
     
-    //[netActivity startAnimating];
-    
     btnConnect.title = @"Disconnect";
-    streamView.hidden = NO;
-
+    
+    [netActivity startAnimating];
 }
 
 -(void)doPlay {
     
-#if 1 // ------------------ use MPMediaDecoder
-    
     decoder = [[MPMediaDecoder alloc] initWithView:streamView];
-    [decoder setupStream:[NSString stringWithFormat:@"%@/%@", host, [NSString stringWithFormat:@"%@%d", stream, upstreamCross]]];
+    decoder.delegate = self;
+    decoder.isRealTime = YES;
     
-#else
+    decoder.orientation = UIImageOrientationUp;
     
-    // --------------------- use RTMPClient
-    
-    NSString *name = [NSString stringWithFormat:@"%@%d", stream, downstreamCross];
-    
-    screen = [[FramesPlayer alloc] initWithView:streamView];
-    screen.orientation = UIImageOrientationRight;
-    
-    player = [[MediaStreamPlayer alloc] initWithClient:socket];
-    player.delegate = self;
-    player.player = screen;
-    [player stream:name];
-    
-#endif
+    NSString *name = [NSString stringWithFormat:@"%@/%@", host, [NSString stringWithFormat:@"%@%d", stream, upstreamCross]];
+    [decoder setupStream:name];
     
     btnPublish.title = @"Pause";
     btnToggle.enabled = YES;
 }
 
 -(void)doDisconnect {
-    [player disconnect];
     [upstream disconnect];
 }
 
@@ -197,13 +168,7 @@ static BOOL isCrossStreams = NO;
     [decoder cleanupStream];
     decoder = nil;
     
-    [socket disconnect];
-    socket = nil;
-    screen = nil;
-    player = nil;
     upstream = nil;
-    
-    [netActivity stopAnimating];
    
     btnConnect.title = @"Connect";
     btnToggle.enabled = NO;
@@ -212,14 +177,8 @@ static BOOL isCrossStreams = NO;
     btnPublish.enabled = NO;
     
     streamView.hidden = YES;
-}
-
--(void)sendMetadata {
     
-    NSString *camera = upstream.isUsingFrontFacingCamera ? @"FRONT" : @"BACK";
-    NSDate *date = [NSDate date];
-    NSDictionary *meta = [NSDictionary dictionaryWithObjectsAndKeys:camera, @"camera", [date description], @"date", nil];
-    [upstream sendMetadata:meta event:@"changedCamera:"];
+    [netActivity stopAnimating];
 }
 
 #pragma mark -
@@ -231,7 +190,7 @@ static BOOL isCrossStreams = NO;
     
     NSLog(@"connectControl: host = %@", host);
     
-    (streamView.hidden) ? [self doConnect] : [self doDisconnect];
+    streamView.hidden? [self doConnect] : [self doDisconnect];
 }
 
 -(IBAction)publishControl:(id)sender {
@@ -239,9 +198,9 @@ static BOOL isCrossStreams = NO;
     NSLog(@"publishControl: stream = %@", stream);
     
     if (isCrossStreams)
-        player ? ((player.state != STREAM_PLAYING ? [player start] : [player pause])) : [self doPlay];
+        [self doPlay];
     else
-        (upstream.state != STREAM_PLAYING) ? [upstream start] : [upstream pause];
+        (upstream.state != STREAM_PLAYING)? [upstream start] : [upstream pause];
 }
 
 -(IBAction)camerasToggle:(id)sender {
@@ -252,8 +211,6 @@ static BOOL isCrossStreams = NO;
         return;
     
     [upstream switchCameras];
-    
-    [self sendMetadata];
 }
 
 #pragma mark -
@@ -288,9 +245,6 @@ static BOOL isCrossStreams = NO;
                 
             case STREAM_PAUSED: {
                 
-                if (player)
-                    [player pause];
-                
                 btnPublish.title = @"Start";
                 btnToggle.enabled = NO;
                 
@@ -298,8 +252,6 @@ static BOOL isCrossStreams = NO;
             }
                 
             case STREAM_PLAYING: {
-                
-                [self sendMetadata];
                
                 if (!isCrossStreams)
                     [self doPlay];
@@ -312,18 +264,23 @@ static BOOL isCrossStreams = NO;
         }
     }
     
-    if (sender == player) {
+    if (sender == decoder) {
         
         switch (state) {
+            
+            case STREAM_PLAYING: {
                 
-            case STREAM_CREATED: {
+                if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
+                    
+                    [self connectControl:nil];
+                    [self showAlert:description];
+                    
+                    break;
+                }
                 
+                streamView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);
                 [netActivity stopAnimating];
-                
-                [player start];
-                
-                streamView.hidden = NO;
-                
+
                 break;
             }
                 
@@ -342,7 +299,7 @@ static BOOL isCrossStreams = NO;
     
     [self setDisconnect];
     
-    [self showAlert:(code == -1) ?
+    [self showAlert:(code == -1)?
      @"Unable to connect to the server. Make sure the hostname/IP address and port number are valid" :
      [NSString stringWithFormat:@"connectFailedEvent: %@", description]];
 }
@@ -350,26 +307,5 @@ static BOOL isCrossStreams = NO;
 -(void)metadataReceived:(id)sender event:(NSString *)event metadata:(NSDictionary *)metadata {
     NSLog(@" $$$$$$ <MPIMediaStreamEvent> dataReceived: EVENT: %@, METADATA = %@", event, metadata);
 }
-
-/*/// Send metadata for each video frame
- -(void)pixelBufferShouldBePublished:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp {
-     
-     //[upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp]} event:@"videoFrameOptions:"];
-     
-     //
-     CVPixelBufferRef frameBuffer = pixelBuffer;
-     
-     // Get the base address of the pixel buffer.
-     uint8_t *baseAddress = CVPixelBufferGetBaseAddress(frameBuffer);
-     // Get the data size for contiguous planes of the pixel buffer.
-     size_t bufferSize = CVPixelBufferGetDataSize(frameBuffer);
-     // Get the pixel buffer width and height.
-     size_t width = CVPixelBufferGetWidth(frameBuffer);
-     size_t height = CVPixelBufferGetHeight(frameBuffer);
-     
-     [upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp], @"bufferSize":[NSNumber numberWithInt:bufferSize], @"width":[NSNumber numberWithInt:width], @"height":[NSNumber numberWithInt:height]} event:@"videoFrameOptions:"];
-     //
- }
-/*/
 
 @end

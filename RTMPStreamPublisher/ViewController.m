@@ -3,7 +3,7 @@
 //  RTMPStreamPublisher
 //
 //  Created by Vyacheslav Vdovichenko on 7/10/12.
-//  Copyright (c) 2012 The Midnight Coders, Inc. All rights reserved.
+//  Copyright (c) 2014 The Midnight Coders, Inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -45,24 +45,12 @@
     
     socket = nil;
     upstream = nil;
-    
-    orientation = AVCaptureVideoOrientationLandscapeRight;
-    
-    //echoCancellationOff;
-    
-    //hostTextField.text = @"rtmp://10.0.1.33:1935/live";
-    //hostTextField.text = @"rtmp://10.0.1.33:1935/videorecording";
-    //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
-    //hostTextField.text = @"rtmp://192.168.2.63:1935/videorecording";
+
     hostTextField.text = @"rtmp://192.168.1.105:1935/live";
-    //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
 
-    streamTextField.text = @"slavav7";
-    //streamTextField.text = @"outgoingaudio_c109";
-    //streamTextField.text = @"myStream";
+    streamTextField.text = @"teststream";
 	streamTextField.delegate = self;
-    
 }
 
 -(void)viewDidUnload {
@@ -140,19 +128,17 @@
 
     //[upstream setVideoBitrate:72000];
     
-    //orientation = AVCaptureVideoOrientationPortrait;
+    orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
     //orientation = AVCaptureVideoOrientationLandscapeRight;
-    orientation = AVCaptureVideoOrientationLandscapeLeft;
-    //orientation = orientation % AVCaptureVideoOrientationLandscapeLeft + 1;
+    //orientation = AVCaptureVideoOrientationLandscapeLeft;
     [upstream setVideoOrientation:orientation];
     
     [upstream stream:streamTextField.text publishType:PUBLISH_LIVE];
     //[upstream stream:streamTextField.text orientation:orientation publishType:PUBLISH_RECORD];
     //[upstream stream:streamTextField.text orientation:orientation publishType:PUBLISH_APPEND];
     
-    btnConnect.title = @"Disconnect"; 
-    
+    btnConnect.title = @"Disconnect";
 }
 
 -(void)doDisconnect {
@@ -176,7 +162,6 @@
     streamTextField.hidden = NO;
     
     previewView.hidden = YES;
-    
 }
 
 -(void)sendMetadata {
@@ -300,12 +285,12 @@
      [NSString stringWithFormat:@"connectFailedEvent: %@", description]];
 }
 
-/*/// Send metadata for each video frame
+#if 0
+// Send metadata for each video frame
 -(void)pixelBufferShouldBePublished:(CVPixelBufferRef)pixelBuffer timestamp:(int)timestamp {
     
     NSLog(@" $$$$$$ <MPIMediaStreamEvent> pixelBufferShouldBePublished: %d [%@]", timestamp, [NSThread isMainThread]?@"M":@"T");
 
-#if 0
     //[upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp]} event:@"videoFrameOptions:"];
     
     //
@@ -320,9 +305,7 @@
     size_t height = CVPixelBufferGetHeight(frameBuffer);
     
     [upstream sendMetadata:@{@"videoTimestamp":[NSNumber numberWithInt:timestamp], @"bufferSize":[NSNumber numberWithInt:bufferSize], @"width":[NSNumber numberWithInt:width], @"height":[NSNumber numberWithInt:height]} event:@"videoFrameOptions:"];
-#endif
-    
 }
-/*/
+#endif
 
 @end

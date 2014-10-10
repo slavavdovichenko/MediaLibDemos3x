@@ -3,7 +3,7 @@
 //  RTMPStreamPlayer
 //
 //  Created by Vyacheslav Vdovichenko on 7/11/12.
-//  Copyright (c) 2012 The Midnight Coders, Inc. All rights reserved.
+//  Copyright (c) 2014 The Midnight Coders, Inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -40,22 +40,11 @@
     memoryTicker.asNumber = YES;
     
     decoder = nil;
-    
-    //echoCancellationOff;
-    
-    //hostTextField.text = @"rtmp://10.0.1.33:1935/live";
-    //hostTextField.text = @"rtmp://10.0.1.33:1935/vod";
-    //hostTextField.text = @"rtmp://192.168.2.63:1935/live";
-    //hostTextField.text = @"rtmp://192.168.2.63:1935/vod";
+
     hostTextField.text = @"rtmp://192.168.1.105:1935/live";
-    //hostTextField.text = @"rtmp://192.168.2.100:1935/live";
     hostTextField.delegate = self;
     
-    streamTextField.text = @"slavav7";
-    //streamTextField.text = @"mediaencoder";
-    //streamTextField.text = @"outgoingaudio_c109";
-    //streamTextField.text = @"incomingaudio_1111";
-    //streamTextField.text = @"myStream";
+    streamTextField.text = @"teststream";
 	streamTextField.delegate = self;
     
 }
@@ -96,16 +85,11 @@
     decoder.delegate = self;
     decoder.isRealTime = YES;
     
-    //decoder.orientation = UIImageOrientationUp;
-    //decoder.scale = 0.5f;
+    decoder.orientation = UIImageOrientationUp;
     
     [decoder setupStream:[NSString stringWithFormat:@"%@/%@", hostTextField.text, streamTextField.text]];
 
     btnConnect.title = @"Disconnect";
-    
-}
-
--(void)doDisconnect {
 }
 
 -(void)setDisconnect {
@@ -121,7 +105,6 @@
     streamTextField.hidden = NO;
     
     previewView.hidden = YES;
-    
 }
 
 #pragma mark -
