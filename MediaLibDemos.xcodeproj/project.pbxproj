@@ -160,6 +160,7 @@
 		D316A802190A89A7007E2610 /* x264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264.h; sourceTree = "<group>"; };
 		D316A803190A89A7007E2610 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
 		D316A805190A89A7007E2610 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
+		D353120F19E82CA400895ACC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D3A18E77190EAA9F00A249BA /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		D3A18E78190EAA9F00A249BA /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		D3A18E79190EAA9F00A249BA /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
@@ -742,6 +743,7 @@
 		F9BBFA1614A49BA500C5B39B = {
 			isa = PBXGroup;
 			children = (
+				D353120F19E82CA400895ACC /* README.md */,
 				F9F3EDB8161070D200B0EA20 /* art */,
 				F9BBFA8714A49D0C00C5B39B /* lib */,
 				F9F6992515AC5D01004B6F37 /* RTMPStreamPublisher */,
