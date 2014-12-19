@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController {
     
+    IBOutlet UIView          *previewView;
     IBOutlet UIImageView     *streamView;
     IBOutlet UIBarButtonItem *btnConnect;
     IBOutlet UIBarButtonItem *btnToggle;

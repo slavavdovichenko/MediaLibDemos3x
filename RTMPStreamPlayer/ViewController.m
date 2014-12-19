@@ -32,7 +32,7 @@
 
 -(void)viewDidLoad {
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -41,7 +41,7 @@
     
     decoder = nil;
 
-    hostTextField.text = @"rtmp://192.168.1.105:1935/live";
+    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     
     streamTextField.text = @"teststream";

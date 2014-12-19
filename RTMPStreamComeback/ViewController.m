@@ -22,7 +22,7 @@ static BOOL isCrossStreams = YES;   // Makes video chat (two separate streams) b
 static BOOL isCrossStreams = NO;    // Makes output & input streams on the one device
 #endif
 
-static NSString *host = @"rtmp://192.168.1.105:1935/live";
+static NSString *host = @"rtmp://10.0.1.62:1935/live";
 static NSString *stream = @"teststream";
 
 
@@ -68,8 +68,8 @@ static NSString *stream = @"teststream";
     BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
     
     // if isCrossStreams - makes 'teststream1' & 'teststream2' cross streams, else - one 'teststream0' stream for output & input
-    upstreamCross = isCrossStreams? isPad? 2 :1 :0;
-    downstreamCross = isCrossStreams? isPad? 1 :2 :0;
+    upstreamCross = isCrossStreams?isPad?2:1:0;
+    downstreamCross = isCrossStreams?isPad?1:2:0;
 
 	// Create and add the activity indicator
 	netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:isPad?UIActivityIndicatorViewStyleGray:UIActivityIndicatorViewStyleWhiteLarge];
@@ -108,8 +108,8 @@ static NSString *stream = @"teststream";
 -(void)doConnect {
     
     //resolution = RESOLUTION_LOW;
-    //resolution = RESOLUTION_CIF;
-    resolution = RESOLUTION_MEDIUM;
+    resolution = RESOLUTION_CIF;
+    //resolution = RESOLUTION_MEDIUM;
     //resolution = RESOLUTION_VGA;
     
     upstream = [[BroadcastStreamClient alloc] init:host resolution:resolution];
@@ -150,7 +150,7 @@ static NSString *stream = @"teststream";
     
     decoder.orientation = UIImageOrientationUp;
     
-    NSString *name = [NSString stringWithFormat:@"%@/%@", host, [NSString stringWithFormat:@"%@%d", stream, upstreamCross]];
+    NSString *name = [NSString stringWithFormat:@"%@/%@", host, [NSString stringWithFormat:@"%@%d", stream, downstreamCross]];
     [decoder setupStream:name];
     
     btnPublish.title = @"Pause";
@@ -177,6 +177,7 @@ static NSString *stream = @"teststream";
     btnPublish.enabled = NO;
     
     streamView.hidden = YES;
+    previewView.hidden = YES;
     
     [netActivity stopAnimating];
 }
@@ -252,10 +253,12 @@ static NSString *stream = @"teststream";
             }
                 
             case STREAM_PLAYING: {
-               
+                
+                [upstream setPreviewLayer:previewView];
+                previewView.hidden = NO;
+                
                 if (!isCrossStreams)
                     [self doPlay];
-                
                 break;
             }
                 

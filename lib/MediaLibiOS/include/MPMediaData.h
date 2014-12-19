@@ -18,7 +18,10 @@
 
 #define MP_RTMP_CLIENT_IS_CONNECTED @"RTMP.Client.isConnected"
 #define MP_RTMP_CLIENT_STREAM_IS_CREATED @"RTMP.Client.Stream.isCreated"
+#define MP_NETSTREAM_PUBLISH_START @"NetStream.Publish.Start"
+#define MP_NETSTREAM_PLAY_START @"NetStream.Play.Start"
 #define MP_NETSTREAM_PLAY_STREAM_NOT_FOUND @"NetStream.Play.StreamNotFound"
+
 #define MP_STREAM_SHOULD_VALID_CONNECT @"You should use a valid 'connect', 'attach' or 'stream' method for making the new stream"
 #define MP_STREAM_SHOULD_DISCONNECT @"You should use 'disconnect' method before making the new stream"
 #define MP_STREAM_SHOULD_STOP @"You should use 'stop' method before making the new stream"
