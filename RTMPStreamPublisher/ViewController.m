@@ -72,7 +72,6 @@
     memoryLabel.text = [NSString stringWithFormat:@"%d", [memory intValue]];
 #else
     memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream getMeanFPS]];
-    //memoryLabel.text = [NSString stringWithFormat:@"%g", [upstream.encoder getCurrentFPS]];
 #endif
 }
 
@@ -80,8 +79,7 @@
 
 -(void)showAlert:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self
-                                           cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [av show];
     });
 }
@@ -90,16 +88,16 @@
 
 -(void)doConnect {
     
-    //resolution = RESOLUTION_LOW;
+    resolution = RESOLUTION_LOW;
     //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
-    resolution = RESOLUTION_VGA;
+    //resolution = RESOLUTION_VGA;
     
-#if 0 // use inside RTMPClient instance
+#if 1 // use inside RTMPClient instance
     
-    //upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
+    upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:hostTextField.text];
-    upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
+    //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
 
 #else // use outside RTMPClient instance
     

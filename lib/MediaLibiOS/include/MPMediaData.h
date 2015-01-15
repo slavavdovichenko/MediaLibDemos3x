@@ -8,6 +8,9 @@
 
 #define IS_MEDIA_ENCODER 1
 
+#define TIMESTAMP_BY_HOST_TIMER 0
+#define USE_AUDIO_TIMESTAMP 1
+
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
@@ -117,6 +120,9 @@ enum mp_audio_pcm_type
 +(BOOL)getEchoCancellationOn;
 +(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType;
 +(void)setAVAudioSessionCategoryPlayAndRecord:(AVAudioSessionCategoryOptions)options;
++(void)routeAudioToSpeaker;
++(uint64_t)hostTimeMs:(uint64_t)nanosec;
++(uint64_t)hostTimeMs;
 @end
 
 @protocol MPIMediaStream <NSObject>
@@ -137,7 +143,11 @@ enum mp_audio_pcm_type
 -(int)setupStream:(id)stream  video:(MPVideoCodec)videoCodecID audio:(MPAudioCodec)audioCodecID orientation:(AVCaptureVideoOrientation)orientation resolution:(MPVideoResolution)resolution videoBitrate:(uint)videoBitrate;
 -(void)cleanupStream;
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
+#if USE_AUDIO_TIMESTAMP
+-(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size timestampMs:(int64_t)timestampMs hostTimeMs:(int64_t)hostTimeMs;
+#else
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts;
+#endif
 -(int)getPendingVideoFrames;
 -(double)getCurrentFPS;
 @end

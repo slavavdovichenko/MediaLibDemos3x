@@ -161,6 +161,7 @@
 		D316A803190A89A7007E2610 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x264_config.h; sourceTree = "<group>"; };
 		D316A805190A89A7007E2610 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
 		D353120F19E82CA400895ACC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D35CA5431A67C6E100F500B0 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx"; sourceTree = "<group>"; };
 		D3A18E77190EAA9F00A249BA /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
 		D3A18E78190EAA9F00A249BA /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
 		D3A18E79190EAA9F00A249BA /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
@@ -455,6 +456,7 @@
 		D316A75A190A71C1007E2610 /* doc */ = {
 			isa = PBXGroup;
 			children = (
+				D35CA5431A67C6E100F500B0 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx */,
 				D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */,
 				D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */,
 			);
@@ -1115,7 +1117,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamPlayer/RTMPStreamPlayer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",
@@ -1145,7 +1147,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamPlayer/RTMPStreamPlayer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",
@@ -1245,7 +1247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamPublisher/RTMPStreamPublisher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",
@@ -1273,7 +1275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamPublisher/RTMPStreamPublisher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",
@@ -1305,7 +1307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamComeback/RTMPStreamComeback-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",
@@ -1337,7 +1339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				INFOPLIST_FILE = "RTMPStreamComeback/RTMPStreamComeback-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/CommLibiOS",

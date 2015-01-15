@@ -70,13 +70,9 @@
 // ALERT
 
 -(void)showAlert:(NSString *)message {
-#if 1
-    [[[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-#else
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         [[[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     });
-#endif
 }
 
 -(void)doConnect {

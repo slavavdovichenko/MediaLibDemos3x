@@ -99,23 +99,21 @@ static NSString *stream = @"teststream";
 
 -(void)showAlert:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self
-                                           cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Receive" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [av show];
     });
 }
 
 -(void)doConnect {
     
-    //resolution = RESOLUTION_LOW;
-    resolution = RESOLUTION_CIF;
+    resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
     //resolution = RESOLUTION_VGA;
     
     upstream = [[BroadcastStreamClient alloc] init:host resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:host];
     //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:resolution];
-    
     
     upstream.delegate = self;
     
