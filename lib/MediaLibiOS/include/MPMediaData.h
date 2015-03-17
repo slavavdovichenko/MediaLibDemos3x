@@ -21,6 +21,13 @@
 
 #define MP_RTMP_CLIENT_IS_CONNECTED @"RTMP.Client.isConnected"
 #define MP_RTMP_CLIENT_STREAM_IS_CREATED @"RTMP.Client.Stream.isCreated"
+#define MP_RTMP_CLIENT_STREAM_IS_PLAYING @"RTMP.Client.Stream.Playing"
+#define MP_RTMP_CLIENT_STREAM_IS_PAUSED @"RTMP.Client.Stream.isPaused"
+#define MP_RTMP_CLIENT_STREAM_IS_STOPPED @"RTMP.Client.Stream.isStopped"
+
+#define MP_STREAM_IS_BUSY @"streamIsBusy"
+#define MP_RESOURCE_TEMPORARILY_UNAVAILABLE @"Resource temporarily unavailable" 
+
 #define MP_NETSTREAM_PUBLISH_START @"NetStream.Publish.Start"
 #define MP_NETSTREAM_PLAY_START @"NetStream.Play.Start"
 #define MP_NETSTREAM_PLAY_STREAM_NOT_FOUND @"NetStream.Play.StreamNotFound"

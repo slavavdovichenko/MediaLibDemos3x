@@ -26,6 +26,7 @@
 +(Types *)sharedInstance;
 // managed objects support
 -(BOOL)isManagedObjectSupport;
+-(id)managedInstance:(Class)type;
 // type mapping
 -(void)addAbstractClassMapping:(Class)abstractType mapped:(Class)mappedType;
 -(Class)getAbstractClassMapping:(Class)type;

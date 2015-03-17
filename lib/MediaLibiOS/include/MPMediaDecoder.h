@@ -40,6 +40,8 @@
 
 -(void)setupStream:(id)stream;
 -(void)cleanupStream;
+-(void)pause;
+-(void)resume;
 -(int)getPendingFrames;
 
 @end

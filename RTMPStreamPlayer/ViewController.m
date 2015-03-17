@@ -32,7 +32,7 @@
 
 -(void)viewDidLoad {
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -118,6 +118,8 @@
 -(IBAction)playControl:(id)sender; {
     
     NSLog(@"********************************************* playControl: stream = %@", streamTextField.text);
+    
+    (decoder.state != STREAM_PLAYING) ? [decoder resume] : [decoder pause];
 }
 
 #pragma mark -
@@ -136,8 +138,20 @@
     NSLog(@" $$$$$$ <MPIMediaStreamEvent> stateChangedEvent: %d = %@ [%@]", (int)state, description, [NSThread isMainThread]?@"M":@"T");
     
     switch (state) {
-        
-        case STREAM_PLAYING: {
+            
+        case STREAM_CREATED: {
+            
+            hostTextField.hidden = YES;
+            streamTextField.hidden = YES;
+            //previewView.hidden = NO;
+            
+            btnPlay.enabled = YES;
+            
+            break;
+            
+        }
+            
+        case STREAM_PAUSED: {
             
             if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
                 
@@ -147,9 +161,31 @@
                 break;
             }
             
-            hostTextField.hidden = YES;
-            streamTextField.hidden = YES;
+            btnPlay.title = @"Start";
+            
+            break;
+        }
+        
+        case STREAM_PLAYING: {
+            
+            if ([description isEqualToString:MP_RESOURCE_TEMPORARILY_UNAVAILABLE]) {
+                [self showAlert:description];
+                break;
+            }
+            
+            if ([description isEqualToString:MP_NETSTREAM_PLAY_STREAM_NOT_FOUND]) {
+                
+                [self connectControl:nil];
+                [self showAlert:description];
+                
+                break;
+            }
+            
+            //hostTextField.hidden = YES;
+            //streamTextField.hidden = YES;
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);
+            
+            btnPlay.title = @"Pause";
             
             break;
         }

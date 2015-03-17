@@ -14,7 +14,7 @@ The library imposes the following requirements on the iOS applications utilizing
 1.	iOS Deployment Target - 6.0 or above;
 2.	the following frameworks and libraries must be added to the list of libraries linked to the binary:
 -	AudioToolbox.framework, AVFoundation.framework, CFNetwork.framework, CoreData.framework, CoreGraphics.framework, CoreMedia.framework, CoreVideo.framework, Foundation.framework, Security.framework, libiconv.2.4.0.dylib, libz.dylib;
--	The Midnight Coders static libraries: CommLibiOS.a, MediaLibiOS.a;
+-	The Midnight Coders static library: CommLibiOS.a;
 -	FFmpeg static libraries: libavcodec.a, libavdevice.a, libavfilter.a, libavformat.a, libavutil.a, libswscale.a, libswresample.a;
 -   x264 static library: libx264.a;
 -   speex static libraries: libspeex.a, libspeexdsp.a
