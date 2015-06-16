@@ -40,12 +40,20 @@
     memoryTicker.asNumber = YES;
     
     decoder = nil;
-
+#if 0
     hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     
     streamTextField.text = @"teststream";
 	streamTextField.delegate = self;
+#else
+    
+    hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
+    hostTextField.delegate = self;
+    
+    streamTextField.text = @"sample";
+    streamTextField.delegate = self;
+#endif
     
 }
 
