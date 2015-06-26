@@ -32,7 +32,7 @@
 
 -(void)viewDidLoad {
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -40,7 +40,7 @@
     memoryTicker.asNumber = YES;
     
     decoder = nil;
-#if 0
+#if 1
     hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     

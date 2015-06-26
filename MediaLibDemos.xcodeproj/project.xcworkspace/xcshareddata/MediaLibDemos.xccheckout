@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AA886AA6-4E32-4AB3-9BEC-FA23CE65E66F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MediaLibDemos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>87B0BA9A698BBE221606DB15446EB893BB463A02</key>
+		<string>https://github.com/slavavdovichenko/MediaLibDemos3x.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MediaLibDemos.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>87B0BA9A698BBE221606DB15446EB893BB463A02</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/slavavdovichenko/MediaLibDemos3x.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>87B0BA9A698BBE221606DB15446EB893BB463A02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>87B0BA9A698BBE221606DB15446EB893BB463A02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MediaLibDemos3x</string>
+		</dict>
+	</array>
+</dict>
+</plist>
