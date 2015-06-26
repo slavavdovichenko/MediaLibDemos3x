@@ -55,6 +55,29 @@
 		D3A18EEC190EAAA000A249BA /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED9190EAA9F00A249BA /* libswscale.a */; };
 		D3A18EED190EAAA000A249BA /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED9190EAA9F00A249BA /* libswscale.a */; };
 		D3A18EEE190EAAA000A249BA /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED9190EAA9F00A249BA /* libswscale.a */; };
+		F904F0381B3D550F006BDB58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F0371B3D550F006BDB58 /* main.m */; };
+		F904F03B1B3D550F006BDB58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F03A1B3D550F006BDB58 /* AppDelegate.m */; };
+		F904F03E1B3D550F006BDB58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F03D1B3D550F006BDB58 /* ViewController.m */; };
+		F904F0411B3D550F006BDB58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F904F03F1B3D550F006BDB58 /* Main.storyboard */; };
+		F904F0431B3D550F006BDB58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F904F0421B3D550F006BDB58 /* Images.xcassets */; };
+		F904F0461B3D550F006BDB58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F904F0441B3D550F006BDB58 /* LaunchScreen.xib */; };
+		F904F0521B3D550F006BDB58 /* RTMPPhotoStreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F0511B3D550F006BDB58 /* RTMPPhotoStreamerTests.m */; };
+		F904F0591B3D56F3006BDB58 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB814A49E2400C5B39B /* libz.dylib */; };
+		F904F05C1B3D56F3006BDB58 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F05A1B3D56F3006BDB58 /* libsqlite3.dylib */; };
+		F904F05D1B3D56F3006BDB58 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F05B1B3D56F3006BDB58 /* SystemConfiguration.framework */; };
+		F904F05E1B3D5710006BDB58 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED3190EAA9F00A249BA /* libavcodec.a */; };
+		F904F05F1B3D5714006BDB58 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED4190EAA9F00A249BA /* libavdevice.a */; };
+		F904F0601B3D5719006BDB58 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED5190EAA9F00A249BA /* libavfilter.a */; };
+		F904F0611B3D571D006BDB58 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED6190EAA9F00A249BA /* libavformat.a */; };
+		F904F0621B3D572C006BDB58 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED7190EAA9F00A249BA /* libavutil.a */; };
+		F904F0631B3D5732006BDB58 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED8190EAA9F00A249BA /* libswresample.a */; };
+		F904F0641B3D5736006BDB58 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A18ED9190EAA9F00A249BA /* libswscale.a */; };
+		F904F0651B3D573F006BDB58 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A7F3190A89A7007E2610 /* libspeex.a */; };
+		F904F0661B3D5744006BDB58 /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A7F4190A89A7007E2610 /* libspeexdsp.a */; };
+		F904F0671B3D575B006BDB58 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A805190A89A7007E2610 /* libx264.a */; };
+		F904F0681B3D5763006BDB58 /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A741190A71C1007E2610 /* CommLibiOS.a */; };
+		F904F0691B3D576B006BDB58 /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A764190A71C1007E2610 /* MediaLibiOS.a */; };
+		F97A90C61B3D8F4400D5E17B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89161705810B00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89171705811500F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97C89181705811E00F0B611 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
@@ -110,6 +133,16 @@
 		F9F7034616526484004FCA9B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB914A49E2400C5B39B /* Security.framework */; };
 		F9F7034716526488004FCA9B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFAB814A49E2400C5B39B /* libz.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F904F04C1B3D550F006BDB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9BBFA1814A49BA500C5B39B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F904F0321B3D550F006BDB58;
+			remoteInfo = RTMPPhotoStreamer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D316A741190A71C1007E2610 /* CommLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = CommLibiOS.a; sourceTree = "<group>"; };
@@ -253,6 +286,21 @@
 		D3A18ED7190EAA9F00A249BA /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		D3A18ED8190EAA9F00A249BA /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		D3A18ED9190EAA9F00A249BA /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		F904F0331B3D550F006BDB58 /* RTMPPhotoStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTMPPhotoStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F904F0361B3D550F006BDB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F904F0371B3D550F006BDB58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F904F0391B3D550F006BDB58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F904F03A1B3D550F006BDB58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F904F03C1B3D550F006BDB58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F904F03D1B3D550F006BDB58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F904F0401B3D550F006BDB58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F904F0421B3D550F006BDB58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F904F0451B3D550F006BDB58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F904F04B1B3D550F006BDB58 /* RTMPPhotoStreamerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTMPPhotoStreamerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F904F0501B3D550F006BDB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F904F0511B3D550F006BDB58 /* RTMPPhotoStreamerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTMPPhotoStreamerTests.m; sourceTree = "<group>"; };
+		F904F05A1B3D56F3006BDB58 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F904F05B1B3D56F3006BDB58 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F97C8914170580EC00F0B611 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F988F2A815AD843B0083CB14 /* RTMPStreamPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTMPStreamPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +353,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F904F0301B3D550F006BDB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F97A90C61B3D8F4400D5E17B /* CoreData.framework in Frameworks */,
+				F904F05D1B3D56F3006BDB58 /* SystemConfiguration.framework in Frameworks */,
+				F904F05C1B3D56F3006BDB58 /* libsqlite3.dylib in Frameworks */,
+				F904F0591B3D56F3006BDB58 /* libz.dylib in Frameworks */,
+				F904F05E1B3D5710006BDB58 /* libavcodec.a in Frameworks */,
+				F904F05F1B3D5714006BDB58 /* libavdevice.a in Frameworks */,
+				F904F0601B3D5719006BDB58 /* libavfilter.a in Frameworks */,
+				F904F0611B3D571D006BDB58 /* libavformat.a in Frameworks */,
+				F904F0621B3D572C006BDB58 /* libavutil.a in Frameworks */,
+				F904F0631B3D5732006BDB58 /* libswresample.a in Frameworks */,
+				F904F0641B3D5736006BDB58 /* libswscale.a in Frameworks */,
+				F904F0651B3D573F006BDB58 /* libspeex.a in Frameworks */,
+				F904F0661B3D5744006BDB58 /* libspeexdsp.a in Frameworks */,
+				F904F0671B3D575B006BDB58 /* libx264.a in Frameworks */,
+				F904F0681B3D5763006BDB58 /* CommLibiOS.a in Frameworks */,
+				F904F0691B3D576B006BDB58 /* MediaLibiOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F904F0481B3D550F006BDB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F988F2A515AD843B0083CB14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -717,6 +795,47 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		F904F0341B3D550F006BDB58 /* RTMPPhotoStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				F904F0391B3D550F006BDB58 /* AppDelegate.h */,
+				F904F03A1B3D550F006BDB58 /* AppDelegate.m */,
+				F904F03C1B3D550F006BDB58 /* ViewController.h */,
+				F904F03D1B3D550F006BDB58 /* ViewController.m */,
+				F904F03F1B3D550F006BDB58 /* Main.storyboard */,
+				F904F0421B3D550F006BDB58 /* Images.xcassets */,
+				F904F0441B3D550F006BDB58 /* LaunchScreen.xib */,
+				F904F0351B3D550F006BDB58 /* Supporting Files */,
+			);
+			path = RTMPPhotoStreamer;
+			sourceTree = "<group>";
+		};
+		F904F0351B3D550F006BDB58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F904F0361B3D550F006BDB58 /* Info.plist */,
+				F904F0371B3D550F006BDB58 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F904F04E1B3D550F006BDB58 /* RTMPPhotoStreamerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F904F0511B3D550F006BDB58 /* RTMPPhotoStreamerTests.m */,
+				F904F04F1B3D550F006BDB58 /* Supporting Files */,
+			);
+			path = RTMPPhotoStreamerTests;
+			sourceTree = "<group>";
+		};
+		F904F04F1B3D550F006BDB58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F904F0501B3D550F006BDB58 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F988F2AD15AD843C0083CB14 /* RTMPStreamPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +870,8 @@
 				F9F6992515AC5D01004B6F37 /* RTMPStreamPublisher */,
 				F988F2AD15AD843C0083CB14 /* RTMPStreamPlayer */,
 				F9F703211652641D004FCA9B /* RTMPStreamComeback */,
+				F904F0341B3D550F006BDB58 /* RTMPPhotoStreamer */,
+				F904F04E1B3D550F006BDB58 /* RTMPPhotoStreamerTests */,
 				F9BBFA2414A49BA600C5B39B /* Frameworks */,
 				F9BBFA2214A49BA600C5B39B /* Products */,
 			);
@@ -762,6 +883,8 @@
 				F9F6992015AC5D01004B6F37 /* RTMPStreamPublisher.app */,
 				F988F2A815AD843B0083CB14 /* RTMPStreamPlayer.app */,
 				F9F7031C1652641D004FCA9B /* RTMPStreamComeback.app */,
+				F904F0331B3D550F006BDB58 /* RTMPPhotoStreamer.app */,
+				F904F04B1B3D550F006BDB58 /* RTMPPhotoStreamerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -769,6 +892,8 @@
 		F9BBFA2414A49BA600C5B39B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F904F05A1B3D56F3006BDB58 /* libsqlite3.dylib */,
+				F904F05B1B3D56F3006BDB58 /* SystemConfiguration.framework */,
 				F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */,
 				F9BBFA2514A49BA600C5B39B /* UIKit.framework */,
 				F9BBFA2714A49BA600C5B39B /* Foundation.framework */,
@@ -861,6 +986,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F904F0321B3D550F006BDB58 /* RTMPPhotoStreamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F904F0571B3D550F006BDB58 /* Build configuration list for PBXNativeTarget "RTMPPhotoStreamer" */;
+			buildPhases = (
+				F904F02F1B3D550F006BDB58 /* Sources */,
+				F904F0301B3D550F006BDB58 /* Frameworks */,
+				F904F0311B3D550F006BDB58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RTMPPhotoStreamer;
+			productName = RTMPPhotoStreamer;
+			productReference = F904F0331B3D550F006BDB58 /* RTMPPhotoStreamer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F904F04A1B3D550F006BDB58 /* RTMPPhotoStreamerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F904F0581B3D550F006BDB58 /* Build configuration list for PBXNativeTarget "RTMPPhotoStreamerTests" */;
+			buildPhases = (
+				F904F0471B3D550F006BDB58 /* Sources */,
+				F904F0481B3D550F006BDB58 /* Frameworks */,
+				F904F0491B3D550F006BDB58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F904F04D1B3D550F006BDB58 /* PBXTargetDependency */,
+			);
+			name = RTMPPhotoStreamerTests;
+			productName = RTMPPhotoStreamerTests;
+			productReference = F904F04B1B3D550F006BDB58 /* RTMPPhotoStreamerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F988F2A715AD843B0083CB14 /* RTMPStreamPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F988F2C215AD843C0083CB14 /* Build configuration list for PBXNativeTarget "RTMPStreamPlayer" */;
@@ -921,6 +1081,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "The Midnight Coders, Inc.";
 				TargetAttributes = {
+					F904F0321B3D550F006BDB58 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					F904F04A1B3D550F006BDB58 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F904F0321B3D550F006BDB58;
+					};
 					F988F2A715AD843B0083CB14 = {
 						DevelopmentTeam = 73FSJC7BUF;
 					};
@@ -935,6 +1102,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F9BBFA1614A49BA500C5B39B;
 			productRefGroup = F9BBFA2214A49BA600C5B39B /* Products */;
@@ -944,11 +1112,30 @@
 				F9F6991F15AC5D01004B6F37 /* RTMPStreamPublisher */,
 				F988F2A715AD843B0083CB14 /* RTMPStreamPlayer */,
 				F9F7031B1652641D004FCA9B /* RTMPStreamComeback */,
+				F904F0321B3D550F006BDB58 /* RTMPPhotoStreamer */,
+				F904F04A1B3D550F006BDB58 /* RTMPPhotoStreamerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F904F0311B3D550F006BDB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F904F0411B3D550F006BDB58 /* Main.storyboard in Resources */,
+				F904F0461B3D550F006BDB58 /* LaunchScreen.xib in Resources */,
+				F904F0431B3D550F006BDB58 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F904F0491B3D550F006BDB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F988F2A615AD843B0083CB14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -997,6 +1184,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F904F02F1B3D550F006BDB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F904F03E1B3D550F006BDB58 /* ViewController.m in Sources */,
+				F904F03B1B3D550F006BDB58 /* AppDelegate.m in Sources */,
+				F904F0381B3D550F006BDB58 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F904F0471B3D550F006BDB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F904F0521B3D550F006BDB58 /* RTMPPhotoStreamerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F988F2A415AD843B0083CB14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1029,7 +1234,31 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F904F04D1B3D550F006BDB58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F904F0321B3D550F006BDB58 /* RTMPPhotoStreamer */;
+			targetProxy = F904F04C1B3D550F006BDB58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		F904F03F1B3D550F006BDB58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F904F0401B3D550F006BDB58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F904F0441B3D550F006BDB58 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F904F0451B3D550F006BDB58 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		F988F2B015AD843C0083CB14 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1105,6 +1334,128 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F904F0531B3D550F006BDB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RTMPPhotoStreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/ffmpeg-2.2.1/lib",
+					"$(PROJECT_DIR)/lib/libspeex-1.2rc1/lib",
+					"$(PROJECT_DIR)/lib/libx264-r2409/lib",
+					"$(PROJECT_DIR)/lib/CommLibiOS",
+					"$(PROJECT_DIR)/lib/MediaLibiOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F904F0541B3D550F006BDB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RTMPPhotoStreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/ffmpeg-2.2.1/lib",
+					"$(PROJECT_DIR)/lib/libspeex-1.2rc1/lib",
+					"$(PROJECT_DIR)/lib/libx264-r2409/lib",
+					"$(PROJECT_DIR)/lib/CommLibiOS",
+					"$(PROJECT_DIR)/lib/MediaLibiOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F904F0551B3D550F006BDB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RTMPPhotoStreamerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTMPPhotoStreamer.app/RTMPPhotoStreamer";
+			};
+			name = Debug;
+		};
+		F904F0561B3D550F006BDB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RTMPPhotoStreamerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTMPPhotoStreamer.app/RTMPPhotoStreamer";
+			};
+			name = Release;
+		};
 		F988F2C315AD843C0083CB14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1362,6 +1713,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F904F0571B3D550F006BDB58 /* Build configuration list for PBXNativeTarget "RTMPPhotoStreamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F904F0531B3D550F006BDB58 /* Debug */,
+				F904F0541B3D550F006BDB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F904F0581B3D550F006BDB58 /* Build configuration list for PBXNativeTarget "RTMPPhotoStreamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F904F0551B3D550F006BDB58 /* Debug */,
+				F904F0561B3D550F006BDB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F988F2C215AD843C0083CB14 /* Build configuration list for PBXNativeTarget "RTMPStreamPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

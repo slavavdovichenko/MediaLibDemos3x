@@ -36,7 +36,7 @@
 
 -(void)viewDidLoad {
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -98,6 +98,7 @@
     upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:hostTextField.text];
     //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
+    [upstream setVideoMode:VIDEO_CUSTOM];
 
 #else // use outside RTMPClient instance
     
