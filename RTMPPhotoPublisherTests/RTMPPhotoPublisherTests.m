@@ -1,19 +1,19 @@
 //
-//  RTMPPhotoStreamerTests.m
-//  RTMPPhotoStreamerTests
+//  RTMPPhotoPublisherTests.m
+//  RTMPPhotoPublisherTests
 //
-//  Created by Slava Vdovichenko on 6/26/15.
+//  Created by Slava Vdovichenko on 6/29/15.
 //  Copyright (c) 2015 The Midnight Coders, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface RTMPPhotoStreamerTests : XCTestCase
+@interface RTMPPhotoPublisherTests : XCTestCase
 
 @end
 
-@implementation RTMPPhotoStreamerTests
+@implementation RTMPPhotoPublisherTests
 
 - (void)setUp {
     [super setUp];

@@ -4,13 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RTMPPhotoStreamer.xcscheme</key>
+		<key>RTMPPhotoPublisher.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>RTMPStreamComeback.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
@@ -37,6 +41,16 @@
 			<true/>
 		</dict>
 		<key>F904F04A1B3D550F006BDB58</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F97DF9251B4147F200B310FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F97DF93D1B4147F200B310FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
