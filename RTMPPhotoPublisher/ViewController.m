@@ -18,6 +18,7 @@ static int clickInterval = 2; // sec
 @interface ViewController () <MPIMediaStreamEvent> {
     
     BroadcastStreamClient   *upstream;
+    MPVideoResolution       resolution;
     
     AVCaptureSession            *session;
     AVCaptureVideoDataOutput    *videoDataOutput;
@@ -54,14 +55,18 @@ static int clickInterval = 2; // sec
     
     NSLog(@"******************> connect\n");
     
-    upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:RESOLUTION_LOW];
+    //resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
+    //resolution = RESOLUTION_MEDIUM;
+    resolution = RESOLUTION_VGA;
+    
+    upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:resolution];
     [upstream setVideoMode:VIDEO_CUSTOM];
     upstream.delegate = self;
     
     upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     upstream.audioCodecId = MP_AUDIO_CODEC_NONE;
-    [upstream setVideoOrientation:AVCaptureVideoOrientationPortrait];
-    
+
     [upstream stream:stream publishType:PUBLISH_LIVE];
 }
 
@@ -164,7 +169,6 @@ static int clickInterval = 2; // sec
 // used for KVO observation of the @"capturingStillImage" property to perform flash bulb animation
 static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCaptureStillImageIsCapturingStillImageContext";
 
-
 @implementation ViewController (MediaProcessing)
 
 -(void)setupAVCapture {
@@ -173,8 +177,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     // Create the session
     session = [AVCaptureSession new];
-    // We use low quality
-    [session setSessionPreset:AVCaptureSessionPresetLow];
+    [session setSessionPreset:[self captureSessionPreset]];
     
     // Select a video device, make an input
     NSError *error = nil;
@@ -191,7 +194,10 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     // Make a still image output
     stillImageOutput = [AVCaptureStillImageOutput new];
-    [stillImageOutput addObserver:self forKeyPath:@"capturingStillImage" options:NSKeyValueObservingOptionNew context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
+    [stillImageOutput addObserver:self
+                       forKeyPath:@"capturingStillImage"
+                          options:NSKeyValueObservingOptionNew
+                          context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
     if ( [session canAddOutput:stillImageOutput] )
         [session addOutput:stillImageOutput];
     
@@ -218,6 +224,24 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     [session startRunning];
     
     [self flushPhoto];
+}
+
+-(NSString *)captureSessionPreset {
+    
+    switch (resolution) {
+        case RESOLUTION_LOW:
+            return AVCaptureSessionPresetLow;
+        case RESOLUTION_CIF:
+            return AVCaptureSessionPreset352x288;
+        case RESOLUTION_MEDIUM:
+            return AVCaptureSessionPresetMedium;
+        case RESOLUTION_VGA:
+            return AVCaptureSessionPreset640x480;
+        case RESOLUTION_HIGH:
+            return AVCaptureSessionPresetHigh;
+        default:
+            return AVCaptureSessionPresetLow;
+    }
 }
 
 // clean up capture setup
