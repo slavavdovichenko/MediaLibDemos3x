@@ -46,7 +46,8 @@
     socket = nil;
     upstream = nil;
 
-    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
+    hostTextField.text = @"rtmp://sks30iyy9if.rtmphost.com:1935/callmeios";
+    //hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
 
     streamTextField.text = @"teststream";
@@ -98,7 +99,6 @@
     upstream = [[BroadcastStreamClient alloc] init:hostTextField.text resolution:resolution];
     //upstream = [[BroadcastStreamClient alloc] initOnlyAudio:hostTextField.text];
     //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:hostTextField.text resolution:resolution];
-    [upstream setVideoMode:VIDEO_CUSTOM];
 
 #else // use outside RTMPClient instance
     
@@ -118,11 +118,11 @@
     
     upstream.delegate = self;
     
-    //upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
-    upstream.videoCodecId = MP_VIDEO_CODEC_H264;
+    upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
+    //upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     
-    //upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
-    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    upstream.audioCodecId = MP_AUDIO_CODEC_NELLYMOSER;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
     //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
     //[upstream setVideoBitrate:72000];
