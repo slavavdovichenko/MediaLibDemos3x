@@ -36,7 +36,6 @@
 #define MP_STREAM_SHOULD_DISCONNECT @"You should use 'disconnect' method before making the new stream"
 #define MP_STREAM_SHOULD_STOP @"You should use 'stop' method before making the new stream"
 
-
 typedef enum mp_video_codec MPVideoCodec;
 enum mp_video_codec
 {
@@ -76,11 +75,12 @@ enum mp_media_stream_state
 typedef enum video_encoder_resolution MPVideoResolution;
 enum video_encoder_resolution
 {
-    RESOLUTION_LOW,     // 144x192px (landscape) & 192x144px (portrait)
-    RESOLUTION_CIF,     // 288x352px (landscape) & 352x288px (portrait)
-    RESOLUTION_MEDIUM,  // 360x480px (landscape) & 480x368px (portrait)
-    RESOLUTION_VGA,     // 480x640px (landscape) & 640x480px (portrait)
-    RESOLUTION_HIGH,    // 720x1280px (landscape) & 1280x720px (portrait)
+    RESOLUTION_CUSTOM = -1, // set by user
+    RESOLUTION_LOW,         // 144x192px (landscape) & 192x144px (portrait)
+    RESOLUTION_CIF,         // 288x352px (landscape) & 352x288px (portrait)
+    RESOLUTION_MEDIUM,      // 360x480px (landscape) & 480x368px (portrait)
+    RESOLUTION_VGA,         // 480x640px (landscape) & 640x480px (portrait)
+    RESOLUTION_HIGH,        // 720x1280px (landscape) & 1280x720px (portrait)
 };
 
 typedef enum mp_publish_type MPMediaPublishType;
@@ -149,6 +149,7 @@ enum mp_audio_pcm_type
 @protocol MPIMediaEncoder <NSObject>
 -(int)setupStream:(id)stream  video:(MPVideoCodec)videoCodecID audio:(MPAudioCodec)audioCodecID orientation:(AVCaptureVideoOrientation)orientation resolution:(MPVideoResolution)resolution videoBitrate:(uint)videoBitrate;
 -(void)cleanupStream;
+-(void)setVideoCustom:(uint)fps width:(uint)width height:(uint)height;
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
 #if USE_AUDIO_TIMESTAMP
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size timestampMs:(int64_t)timestampMs hostTimeMs:(int64_t)hostTimeMs;

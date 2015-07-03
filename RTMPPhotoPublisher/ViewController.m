@@ -12,7 +12,10 @@
 #import "BroadcastStreamClient.h"
 #import "VideoPlayer.h"
 
-static NSString *host = @"rtmp://10.0.1.62:1935/live";
+#define TAKE_PHOTO_ON 0
+
+static NSString *host = @"rtmp://sks30iyy9if.rtmphost.com:1935/callmeios";
+//static NSString *host = @"rtmp://10.0.1.62:1935/live";
 static NSString *stream = @"photostream";
 static int clickInterval = 200; // ms
 
@@ -52,7 +55,11 @@ static int clickInterval = 200; // ms
     //[DebLog setIsActive:YES];
     
     _player = [[FramesPlayer alloc] initWithView:self.imageView];
+    
+#if !TAKE_PHOTO_ON
     [self setupAVCapture];
+    self.btnTakePhoto.hidden = YES;
+#endif
     
     [self connect];
 }
@@ -105,7 +112,11 @@ static int clickInterval = 200; // ms
     _resolution = RESOLUTION_VGA;
     
     upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:_resolution];
+#if TAKE_PHOTO_ON
+    [upstream setVideoCustom:5 width:640 height:640];
+#else
     [upstream setVideoMode:VIDEO_CUSTOM];
+#endif
     upstream.delegate = self;
     
     upstream.videoCodecId = MP_VIDEO_CODEC_H264;
@@ -393,12 +404,12 @@ static int clickInterval = 200; // ms
     }
     else {
         CGContextDrawImage(context, CGRectMake(0, 0, width, height), image);
+        CGContextRelease(context);
     }
     
     CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
     
     CGColorSpaceRelease(cs);
-    CGContextRelease(context);
     
     return pxbuffer;
 }
@@ -434,6 +445,13 @@ static int clickInterval = 200; // ms
     CVPixelBufferUnlockBaseAddress(frameBuffer, 0);
     
     return cgImage;
+}
+
+// !!! after using need !!! - CGImageRelease(cgImage);
+-(CGImageRef)imageFromImageBuffer:(CVImageBufferRef)imageBuffer {
+    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:imageBuffer];
+    CIContext *context = [CIContext contextWithOptions:nil];
+    return [context createCGImage:ciImage fromRect:CGRectMake(0, 0, CVPixelBufferGetWidth(imageBuffer), CVPixelBufferGetHeight(imageBuffer))];
 }
 
 @end

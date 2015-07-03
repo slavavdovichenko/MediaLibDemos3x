@@ -64,6 +64,7 @@ enum audio_mode
 -(BOOL)setVideoBitrate:(uint)bitRate;
 -(BOOL)setVideoResolution:(MPVideoResolution)resolution bitRate:(uint)bitRate;
 -(BOOL)setVideoOrientation:(AVCaptureVideoOrientation)orientation;
+-(BOOL)setVideoCustom:(uint)fps width:(uint)width height:(uint)height;
 -(void)setPreviewLayer:(UIView *)preview;
 -(void)teardownPreviewLayer;
 -(void)switchCameras;
