@@ -14,8 +14,7 @@
 
 #define TAKE_PHOTO_ON 0
 
-static NSString *host = @"rtmp://sks30iyy9if.rtmphost.com:1935/callmeios";
-//static NSString *host = @"rtmp://10.0.1.62:1935/live";
+static NSString *host = @"rtmp://10.0.1.62:1935/live";
 static NSString *stream = @"photostream";
 static int clickInterval = 200; // ms
 
