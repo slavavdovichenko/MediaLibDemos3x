@@ -73,6 +73,7 @@ enum audio_mode
 -(double)getMeanFPS;
 
 -(BOOL)setAudioMode:(AudioMode)mode;
+-(BOOL)setAudioBitrate:(uint)bitRate;
 
 -(BOOL)connect:(NSString *)url name:(NSString *)name publishType:(MPMediaPublishType)type;
 -(BOOL)attach:(RTMPClient *)client name:(NSString *)name publishType:(MPMediaPublishType)type;

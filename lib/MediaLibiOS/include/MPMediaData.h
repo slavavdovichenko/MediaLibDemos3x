@@ -150,6 +150,7 @@ enum mp_audio_pcm_type
 -(int)setupStream:(id)stream  video:(MPVideoCodec)videoCodecID audio:(MPAudioCodec)audioCodecID orientation:(AVCaptureVideoOrientation)orientation resolution:(MPVideoResolution)resolution videoBitrate:(uint)videoBitrate;
 -(void)cleanupStream;
 -(void)setVideoCustom:(uint)fps width:(uint)width height:(uint)height;
+-(void)setAudioBitrate:(uint)bitRate;
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
 #if USE_AUDIO_TIMESTAMP
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size timestampMs:(int64_t)timestampMs hostTimeMs:(int64_t)hostTimeMs;
