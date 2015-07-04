@@ -15,7 +15,7 @@
 #define TAKE_PHOTO_ON 0
 
 static NSString *host = @"rtmp://10.0.1.62:1935/live";
-static NSString *stream = @"photostream";
+static NSString *stream = @"teststream";
 static int clickInterval = 200; // ms
 
 @interface ViewController () <MPIMediaStreamEvent> {
@@ -111,6 +111,7 @@ static int clickInterval = 200; // ms
     _resolution = RESOLUTION_VGA;
     
     upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:_resolution];
+    //upstream = [[BroadcastStreamClient alloc] init:host resolution:_resolution];
 #if TAKE_PHOTO_ON
     [upstream setVideoCustom:5 width:640 height:640];
 #else

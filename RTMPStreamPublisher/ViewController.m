@@ -36,7 +36,7 @@
 
 -(void)viewDidLoad {
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -88,8 +88,8 @@
 
 -(void)doConnect {
     
-    resolution = RESOLUTION_LOW;
-    //resolution = RESOLUTION_CIF;
+    //resolution = RESOLUTION_LOW;
+    resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
     //resolution = RESOLUTION_VGA;
     
@@ -124,7 +124,8 @@
     upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
     //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
-    //[upstream setVideoBitrate:72000];
+    [upstream setVideoBitrate:72000];
+    [upstream setAudioBitrate:40000];
     
     orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
