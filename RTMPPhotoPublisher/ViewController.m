@@ -43,6 +43,7 @@ static int clickInterval = 200; // ms
 @interface ViewController (ImageProcessing)
 -(CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image;
 -(CGImageRef)imageFromPixelBuffer:(CVPixelBufferRef)frameBuffer;
+-(CGImageRef)imageFromImageBuffer:(CVImageBufferRef)imageBuffer;
 @end
 
 
@@ -85,10 +86,13 @@ static int clickInterval = 200; // ms
     
     UIImage *image = info[UIImagePickerControllerEditedImage];
     [self.imageView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES]; // MAIN THREAD
-    
+#if 0
     CVPixelBufferRef pixelBuffer = [self pixelBufferFromCGImage:[image CGImage]];
     [upstream sendFrame:pixelBuffer timestamp:_timestamp];
     CVPixelBufferRelease(pixelBuffer);
+#else
+    [upstream sendImage:[image CGImage] timestamp:_timestamp];
+#endif
 
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -362,10 +366,14 @@ static int clickInterval = 200; // ms
     NSLog(@"captureOutput: timestamp = %lld", _timestamp);
     
     CGImageRef frame = [self imageFromPixelBuffer:pixelBuffer];
+#if 0
     CVPixelBufferRef framePixelBuffer = [self pixelBufferFromCGImage:frame];
     [upstream sendFrame:framePixelBuffer timestamp:_timestamp];
-    
     CVPixelBufferRelease(framePixelBuffer);
+#else
+    [upstream sendImage:frame timestamp:_timestamp];
+#endif
+    
     CGImageRelease(frame);
 #endif
     
