@@ -12,11 +12,12 @@
 #import "BroadcastStreamClient.h"
 #import "VideoPlayer.h"
 
-#define TAKE_PHOTO_ON 0
+#define TAKE_PHOTO_ON 1
 
 static NSString *host = @"rtmp://10.0.1.62:1935/live";
 static NSString *stream = @"teststream";
-static int clickInterval = 200; // ms
+static int clickInterval = 100; // ms
+static int defaultFPS = 10;
 
 @interface ViewController () <MPIMediaStreamEvent> {
     
@@ -85,14 +86,8 @@ static int clickInterval = 200; // ms
     NSLog(@"imagePickerController: timestamp = %lld", _timestamp);
     
     UIImage *image = info[UIImagePickerControllerEditedImage];
-    [self.imageView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES]; // MAIN THREAD
-#if 0
-    CVPixelBufferRef pixelBuffer = [self pixelBufferFromCGImage:[image CGImage]];
-    [upstream sendFrame:pixelBuffer timestamp:_timestamp];
-    CVPixelBufferRelease(pixelBuffer);
-#else
-    [upstream sendImage:[image CGImage] timestamp:_timestamp];
-#endif
+    [self serialImage:image times:10];
+    [self.imageView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
 
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -117,7 +112,7 @@ static int clickInterval = 200; // ms
     upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:_resolution];
     //upstream = [[BroadcastStreamClient alloc] init:host resolution:_resolution];
 #if TAKE_PHOTO_ON
-    [upstream setVideoCustom:5 width:640 height:640];
+    [upstream setVideoCustom:defaultFPS width:640 height:640];
 #else
     [upstream setVideoMode:VIDEO_CUSTOM];
 #endif
@@ -172,6 +167,27 @@ static int clickInterval = 200; // ms
     // Send the frame
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     [upstream sendFrame:pixelBuffer timestamp:_timestamp];
+}
+
+-(void)serialImage:(UIImage *)image times:(int)times {
+    
+    if (!upstream)
+        return;
+    
+    int64_t _timestamp = [self getTimestampMs];
+    
+    NSLog(@"serialImage: timestamp = %lld", _timestamp);
+    
+    [upstream sendImage:[image CGImage] timestamp:_timestamp];
+    
+    if (!times--)
+        return;
+    
+    dispatch_time_t interval = dispatch_time(DISPATCH_TIME_NOW, 1ull*NSEC_PER_MSEC*1000/defaultFPS);
+    dispatch_after(interval, dispatch_get_main_queue(), ^{
+        [self serialImage:image times:times];
+    });
+    
 }
 
 
@@ -363,17 +379,11 @@ static int clickInterval = 200; // ms
     [self sendFrame:sampleBuffer];
 #else
     int64_t _timestamp = [self getTimestampMs];
+    
     NSLog(@"captureOutput: timestamp = %lld", _timestamp);
     
     CGImageRef frame = [self imageFromPixelBuffer:pixelBuffer];
-#if 0
-    CVPixelBufferRef framePixelBuffer = [self pixelBufferFromCGImage:frame];
-    [upstream sendFrame:framePixelBuffer timestamp:_timestamp];
-    CVPixelBufferRelease(framePixelBuffer);
-#else
     [upstream sendImage:frame timestamp:_timestamp];
-#endif
-    
     CGImageRelease(frame);
 #endif
     
