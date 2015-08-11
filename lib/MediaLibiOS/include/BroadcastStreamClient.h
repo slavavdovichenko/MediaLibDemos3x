@@ -20,19 +20,15 @@
 #import "MPMediaData.h"
 #import "RTMPClient.h"
 
-typedef enum video_mode VideoMode;
-enum video_mode
-{
+typedef enum {
     VIDEO_CAPTURE,
     VIDEO_CUSTOM,
-};
+} VideoMode;
 
-typedef enum audio_mode AudioMode;
-enum audio_mode
-{
+typedef enum {
     AUDIO_ON,
     AUDIO_OFF,
-};
+} AudioMode;
 
 @protocol IVideoPlayer;
 @class SysTimer, MPMediaEncoder, VideoCodec, AudioCodec;

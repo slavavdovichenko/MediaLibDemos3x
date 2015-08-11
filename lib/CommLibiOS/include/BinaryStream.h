@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef union u_double u_double_t;
-union u_double
-{
+typedef union {
 	char _buf[8];
     long _long;
     double _double;
-};
+} u_double_t;
 
 @interface BinaryStream : NSObject {
 	char			*buffer;

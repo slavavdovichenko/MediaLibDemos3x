@@ -36,70 +36,56 @@
 #define MP_STREAM_SHOULD_DISCONNECT @"You should use 'disconnect' method before making the new stream"
 #define MP_STREAM_SHOULD_STOP @"You should use 'stop' method before making the new stream"
 
-typedef enum mp_video_codec MPVideoCodec;
-enum mp_video_codec
-{
+typedef enum {
     MP_VIDEO_CODEC_NONE,
     MP_VIDEO_CODEC_FLV1,
     MP_VIDEO_CODEC_H264,
-};
+} MPVideoCodec;
 
-typedef enum mp_audio_codec MPAudioCodec;
-enum mp_audio_codec
-{
+typedef enum {
     MP_AUDIO_CODEC_NONE,
     MP_AUDIO_CODEC_NELLYMOSER,
     MP_AUDIO_CODEC_AAC,
     MP_AUDIO_CODEC_SPEEX,
-};
+} MPAudioCodec;
 
-typedef enum mp_media_channel_id MPMediaChannelID;
-enum mp_media_channel_id
-{
+typedef enum {
     SYSTEM_CHANNEL_ID = 3,
     COMMAND_CHANNEL_ID = 4,
     VIDEO_CHANNEL_ID = 8,
     AUDIO_CHANNEL_ID = 9,
-};
+} MPMediaChannelID;
 
-typedef enum mp_media_stream_state MPMediaStreamState;
-enum mp_media_stream_state
-{
+typedef enum {
     CONN_DISCONNECTED,
     CONN_CONNECTED,
     STREAM_CREATED,
     STREAM_PLAYING,
     STREAM_PAUSED,
-};
+} MPMediaStreamState;
 
-typedef enum video_encoder_resolution MPVideoResolution;
-enum video_encoder_resolution
-{
+typedef enum {
     RESOLUTION_CUSTOM = -1, // set by user
     RESOLUTION_LOW,         // 144x192px (landscape) & 192x144px (portrait)
     RESOLUTION_CIF,         // 288x352px (landscape) & 352x288px (portrait)
     RESOLUTION_MEDIUM,      // 360x480px (landscape) & 480x368px (portrait)
     RESOLUTION_VGA,         // 480x640px (landscape) & 640x480px (portrait)
     RESOLUTION_HIGH,        // 720x1280px (landscape) & 1280x720px (portrait)
-};
+} MPVideoResolution;
 
-typedef enum mp_publish_type MPMediaPublishType;
-enum mp_publish_type
-{
+typedef enum {
 	PUBLISH_RECORD,
 	PUBLISH_APPEND,
 	PUBLISH_LIVE,
-};
+} MPMediaPublishType;
 
-typedef enum mp_audio_pcm_type MPAudioPCMType;
-enum mp_audio_pcm_type
-{
+typedef enum {
 	MP_AUDIO_PCM_U8,
 	MP_AUDIO_PCM_S16,
 	MP_AUDIO_PCM_S32,
 	MP_AUDIO_PCM_FLT,
 	MP_AUDIO_PCM_DBL,
-};
+} MPAudioPCMType;
 
 @interface MPMediaData : NSObject
 @property uint8_t *data;
