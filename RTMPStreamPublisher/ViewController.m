@@ -57,11 +57,11 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-
+#if 0
 -(NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
-
+#endif
 #pragma mark -
 #pragma mark Private Methods 
 
@@ -89,9 +89,9 @@
 -(void)doConnect {
     
     //resolution = RESOLUTION_LOW;
-    resolution = RESOLUTION_CIF;
+    //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
-    //resolution = RESOLUTION_VGA;
+    resolution = RESOLUTION_VGA;
     
 #if 1 // use inside RTMPClient instance
     
@@ -124,8 +124,8 @@
     upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
     //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
-    [upstream setVideoBitrate:72000];
-    [upstream setAudioBitrate:40000];
+    //[upstream setVideoBitrate:72000];
+    //[upstream setAudioBitrate:40000];
     
     orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
