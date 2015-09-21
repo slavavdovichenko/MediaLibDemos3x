@@ -41,7 +41,7 @@
     
     decoder = nil;
 #if 1
-    hostTextField.text = @"rtmp://rtmp://10.0.1.62:1935/live";
+    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     
     streamTextField.text = @"teststream";
