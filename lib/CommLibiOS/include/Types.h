@@ -51,9 +51,9 @@
 +(NSString *)targetName;
 +(NSDictionary *)getInfoPlist;
 +(id)getInfoPlist:(NSString *)key;
-// try catch functionality for swift by wrapping around Objective-C
-+(void)try:(void(^)())try catch:(void(^)(id exception))catch finally:(void(^)())finally;
-+(void)try:(void(^)())try catch:(void(^)(id exception))catch;
+// try/catch functionality for swift by wrapping around Objective-C
++(void)tryblock:(void(^)())tryblock catchblock:(void(^)(id exception))catchblock finally:(void(^)())finally;
++(void)tryblock:(void(^)())tryblock catchblock:(void(^)(id exception))catchblock;
 +(void)throwObjectAsException:(id)obj;
 @end
 
