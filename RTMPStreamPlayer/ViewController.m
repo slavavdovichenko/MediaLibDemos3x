@@ -189,6 +189,8 @@
                 break;
             }
             
+            [MPMediaData routeAudioToSpeaker];
+           
             //hostTextField.hidden = YES;
             //streamTextField.hidden = YES;
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);

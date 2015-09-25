@@ -120,7 +120,9 @@ static int defaultFPS = 10;
     
     //upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     //upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
-    upstream.audioCodecId = MP_AUDIO_CODEC_NONE;
+    
+    //upstream.audioCodecId = MP_AUDIO_CODEC_NONE;
+    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
 
     //_orientation = AVCaptureVideoOrientationPortrait;
     //_orientation = AVCaptureVideoOrientationPortraitUpsideDown;
