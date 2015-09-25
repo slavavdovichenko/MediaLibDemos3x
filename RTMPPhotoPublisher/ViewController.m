@@ -118,7 +118,7 @@ static int defaultFPS = 10;
 #endif
     upstream.delegate = self;
     
-    upstream.videoCodecId = MP_VIDEO_CODEC_H264;
+    //upstream.videoCodecId = MP_VIDEO_CODEC_H264;
     //upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
     upstream.audioCodecId = MP_AUDIO_CODEC_NONE;
 

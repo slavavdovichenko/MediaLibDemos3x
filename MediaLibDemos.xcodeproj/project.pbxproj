@@ -34,7 +34,6 @@
 		F97DF9341B4147F200B310FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97DF9321B4147F200B310FB /* Main.storyboard */; };
 		F97DF9361B4147F200B310FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97DF9351B4147F200B310FB /* Images.xcassets */; };
 		F97DF9391B4147F200B310FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97DF9371B4147F200B310FB /* LaunchScreen.xib */; };
-		F97DF94C1B41482000B310FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F97DF94F1B41482000B310FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F05B1B3D56F3006BDB58 /* SystemConfiguration.framework */; };
 		F97DF95A1B4148AE00B310FB /* CommLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A741190A71C1007E2610 /* CommLibiOS.a */; };
 		F97DF95B1B4148C600B310FB /* MediaLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D316A764190A71C1007E2610 /* MediaLibiOS.a */; };
@@ -93,6 +92,7 @@
 		F9B3DFFA1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFB1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
+		F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F9F3EDBA161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F3EDBB161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F6992215AC5D01004B6F37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFA2514A49BA600C5B39B /* UIKit.framework */; };
@@ -321,19 +321,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9B3DFF41BAB5E9A00DC2E93 /* libswscale.a in Frameworks */,
-				F9B3DFE81BAB5E9A00DC2E93 /* libavfilter.a in Frameworks */,
 				F9B3DF721BAB5D0C00DC2E93 /* libsqlite3.tbd in Frameworks */,
 				F9B3DF731BAB5D1100DC2E93 /* libz.tbd in Frameworks */,
-				F9B3DFF81BAB5E9A00DC2E93 /* libspeex.a in Frameworks */,
-				F9B3DFEC1BAB5E9A00DC2E93 /* libavformat.a in Frameworks */,
-				F9B3DFF01BAB5E9A00DC2E93 /* libavutil.a in Frameworks */,
-				F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */,
-				F9B3DFE41BAB5E9A00DC2E93 /* libavdevice.a in Frameworks */,
-				F97DF94C1B41482000B310FB /* CoreData.framework in Frameworks */,
+				F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */,
 				F97DF94F1B41482000B310FB /* SystemConfiguration.framework in Frameworks */,
-				F97DF95A1B4148AE00B310FB /* CommLibiOS.a in Frameworks */,
 				F9B3DFE01BAB5E9A00DC2E93 /* libavcodec.a in Frameworks */,
+				F9B3DFE41BAB5E9A00DC2E93 /* libavdevice.a in Frameworks */,
+				F9B3DFEC1BAB5E9A00DC2E93 /* libavformat.a in Frameworks */,
+				F9B3DFF41BAB5E9A00DC2E93 /* libswscale.a in Frameworks */,
+				F9B3DFF01BAB5E9A00DC2E93 /* libavutil.a in Frameworks */,
+				F9B3DFE81BAB5E9A00DC2E93 /* libavfilter.a in Frameworks */,
+				F9B3DFF81BAB5E9A00DC2E93 /* libspeex.a in Frameworks */,
+				F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */,
+				F97DF95A1B4148AE00B310FB /* CommLibiOS.a in Frameworks */,
 				F97DF95B1B4148C600B310FB /* MediaLibiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
