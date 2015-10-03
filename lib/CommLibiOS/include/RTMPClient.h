@@ -47,6 +47,7 @@
 -(void)connect:(NSString *)url andParams:(NSArray *)params;
 -(BOOL)connected;
 -(void)disconnect;
+-(void)disconnect:(id)owner;
 
 // invokes
 -(int)invoke:(NSString *)method withArgs:(NSArray *)args responder:(id <IPendingServiceCallback>)responder;
