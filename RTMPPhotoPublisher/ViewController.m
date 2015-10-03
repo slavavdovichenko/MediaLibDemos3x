@@ -109,8 +109,8 @@ static int defaultFPS = 10;
     //_resolution = RESOLUTION_MEDIUM;
     _resolution = RESOLUTION_VGA;
     
-    upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:_resolution];
-    //upstream = [[BroadcastStreamClient alloc] init:host resolution:_resolution];
+    //upstream = [[BroadcastStreamClient alloc] initOnlyVideo:host resolution:_resolution];
+    upstream = [[BroadcastStreamClient alloc] init:host resolution:_resolution];
 #if TAKE_PHOTO_ON
     [upstream setVideoCustom:defaultFPS width:640 height:640];
 #else
@@ -122,7 +122,7 @@ static int defaultFPS = 10;
     //upstream.videoCodecId = MP_VIDEO_CODEC_FLV1;
     
     //upstream.audioCodecId = MP_AUDIO_CODEC_NONE;
-    upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
+    //upstream.audioCodecId = MP_AUDIO_CODEC_AAC;
 
     //_orientation = AVCaptureVideoOrientationPortrait;
     //_orientation = AVCaptureVideoOrientationPortraitUpsideDown;
