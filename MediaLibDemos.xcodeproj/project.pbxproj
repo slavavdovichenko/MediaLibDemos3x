@@ -16,9 +16,6 @@
 		D316A76B190A71C2007E2610 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = D316A744190A71C1007E2610 /* WeborbClient Class Reference.odt */; };
 		D316A76C190A71C2007E2610 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = D316A744190A71C1007E2610 /* WeborbClient Class Reference.odt */; };
 		D316A76D190A71C2007E2610 /* WeborbClient Class Reference.odt in Resources */ = {isa = PBXBuildFile; fileRef = D316A744190A71C1007E2610 /* WeborbClient Class Reference.odt */; };
-		D316A76E190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */; };
-		D316A76F190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */; };
-		D316A770190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */; };
 		D316A771190A71C2007E2610 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */; };
 		D316A772190A71C2007E2610 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */; };
 		D316A773190A71C2007E2610 /* Media Library for iOS User Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */; };
@@ -92,7 +89,6 @@
 		F9B3DFFA1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFB1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
-		F9CB13721BC3DD5500F3CA1D /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F9CB13711BC3DD5500F3CA1D /* license.bin */; };
 		F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F9F3EDBA161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F3EDBB161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
@@ -152,7 +148,6 @@
 		D316A756190A71C1007E2610 /* RTMPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMPClient.h; sourceTree = "<group>"; };
 		D316A757190A71C1007E2610 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		D316A758190A71C1007E2610 /* WeborbClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeborbClient.h; sourceTree = "<group>"; };
-		D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Building Media Stream Apps.docx"; sourceTree = "<group>"; };
 		D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Media Library for iOS User Guide.docx"; sourceTree = "<group>"; };
 		D316A75E190A71C1007E2610 /* BroadcastStreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastStreamClient.h; sourceTree = "<group>"; };
 		D316A75F190A71C1007E2610 /* MediaStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaStreamPlayer.h; sourceTree = "<group>"; };
@@ -162,7 +157,6 @@
 		D316A763190A71C1007E2610 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		D316A764190A71C1007E2610 /* MediaLibiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MediaLibiOS.a; sourceTree = "<group>"; };
 		D353120F19E82CA400895ACC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		D35CA5431A67C6E100F500B0 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx"; sourceTree = "<group>"; };
 		F904F05B1B3D56F3006BDB58 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F959131F14DC2E8E00A3EB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F97C8914170580EC00F0B611 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -289,7 +283,6 @@
 		F9BBFAB614A49E2400C5B39B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F9BBFAB714A49E2400C5B39B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F9BBFAB914A49E2400C5B39B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F9CB13711BC3DD5500F3CA1D /* license.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = license.bin; path = ../../../../Downloads/license.bin; sourceTree = "<group>"; };
 		F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9F6992015AC5D01004B6F37 /* RTMPStreamPublisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTMPStreamPublisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6992715AC5D01004B6F37 /* RTMPStreamPublisher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RTMPStreamPublisher-Info.plist"; sourceTree = "<group>"; };
@@ -488,8 +481,6 @@
 		D316A75A190A71C1007E2610 /* doc */ = {
 			isa = PBXGroup;
 			children = (
-				D35CA5431A67C6E100F500B0 /* Developing an iOS Video Recorder and Player on Swift in 10 Minutes from the Scratch.docx */,
-				D316A75B190A71C1007E2610 /* Building Media Stream Apps.docx */,
 				D316A75C190A71C1007E2610 /* Media Library for iOS User Guide.docx */,
 			);
 			path = doc;
@@ -791,7 +782,6 @@
 		F9BBFA1614A49BA500C5B39B = {
 			isa = PBXGroup;
 			children = (
-				F9CB13711BC3DD5500F3CA1D /* license.bin */,
 				D353120F19E82CA400895ACC /* README.md */,
 				F9F3EDB8161070D200B0EA20 /* art */,
 				F9BBFA8714A49D0C00C5B39B /* lib */,
@@ -1038,7 +1028,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D316A769190A71C2007E2610 /* Communication Library for iOS User Guide.pdf in Resources */,
-				D316A76F190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */,
 				F988F2B215AD843C0083CB14 /* InfoPlist.strings in Resources */,
 				F988F2BB15AD843C0083CB14 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F988F2BE15AD843C0083CB14 /* MainStoryboard_iPad.storyboard in Resources */,
@@ -1052,9 +1041,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9CB13721BC3DD5500F3CA1D /* license.bin in Resources */,
 				D316A768190A71C2007E2610 /* Communication Library for iOS User Guide.pdf in Resources */,
-				D316A76E190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */,
 				F9F6992A15AC5D01004B6F37 /* InfoPlist.strings in Resources */,
 				F9F6993315AC5D01004B6F37 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F9F6993615AC5D01004B6F37 /* MainStoryboard_iPad.storyboard in Resources */,
@@ -1069,7 +1056,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D316A76A190A71C2007E2610 /* Communication Library for iOS User Guide.pdf in Resources */,
-				D316A770190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */,
 				F9F703261652641D004FCA9B /* InfoPlist.strings in Resources */,
 				F9F703321652641D004FCA9B /* Default-568h@2x.png in Resources */,
 				F9F703351652641D004FCA9B /* MainStoryboard_iPhone.storyboard in Resources */,
@@ -1442,7 +1428,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.--151010";
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.RTMPStreamPublisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 x86_64 i386";
@@ -1471,7 +1457,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.--151010";
+				PRODUCT_BUNDLE_IDENTIFIER = com.themidnightcoders.RTMPStreamPublisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 x86_64 i386";

@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "87B0BA9A698BBE221606DB15446EB893BB463A02",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "3d429ead-c47d-b04e-b746-2a0b5c1375b7++2038" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "87B0BA9A698BBE221606DB15446EB893BB463A02" : 0,
+    "3d429ead-c47d-b04e-b746-2a0b5c1375b7++2038" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AA886AA6-4E32-4AB3-9BEC-FA23CE65E66F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "87B0BA9A698BBE221606DB15446EB893BB463A02" : "MediaLibDemos3x",
+    "3d429ead-c47d-b04e-b746-2a0b5c1375b7++2038" : "..\/WebORBiOS"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MediaLibDemos",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MediaLibDemos.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/www.themidnightcoders.com",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3d429ead-c47d-b04e-b746-2a0b5c1375b7++2038"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/slavavdovichenko\/MediaLibDemos3x.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "87B0BA9A698BBE221606DB15446EB893BB463A02"
+    }
+  ]
+}
