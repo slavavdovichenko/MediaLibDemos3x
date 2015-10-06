@@ -92,6 +92,7 @@
 		F9B3DFFA1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFB1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
 		F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; settings = {ASSET_TAGS = (); }; };
+		F9CB13721BC3DD5500F3CA1D /* license.bin in Resources */ = {isa = PBXBuildFile; fileRef = F9CB13711BC3DD5500F3CA1D /* license.bin */; };
 		F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F9F3EDBA161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F3EDBB161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
@@ -288,6 +289,7 @@
 		F9BBFAB614A49E2400C5B39B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F9BBFAB714A49E2400C5B39B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F9BBFAB914A49E2400C5B39B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F9CB13711BC3DD5500F3CA1D /* license.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = license.bin; path = ../../../../Downloads/license.bin; sourceTree = "<group>"; };
 		F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F9F6992015AC5D01004B6F37 /* RTMPStreamPublisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTMPStreamPublisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6992715AC5D01004B6F37 /* RTMPStreamPublisher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RTMPStreamPublisher-Info.plist"; sourceTree = "<group>"; };
@@ -789,6 +791,7 @@
 		F9BBFA1614A49BA500C5B39B = {
 			isa = PBXGroup;
 			children = (
+				F9CB13711BC3DD5500F3CA1D /* license.bin */,
 				D353120F19E82CA400895ACC /* README.md */,
 				F9F3EDB8161070D200B0EA20 /* art */,
 				F9BBFA8714A49D0C00C5B39B /* lib */,
@@ -1049,6 +1052,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CB13721BC3DD5500F3CA1D /* license.bin in Resources */,
 				D316A768190A71C2007E2610 /* Communication Library for iOS User Guide.pdf in Resources */,
 				D316A76E190A71C2007E2610 /* Building Media Stream Apps.docx in Resources */,
 				F9F6992A15AC5D01004B6F37 /* InfoPlist.strings in Resources */,
@@ -1438,7 +1442,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.--151010";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 x86_64 i386";
@@ -1467,7 +1471,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.themidnightcoders.--151010";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 x86_64 i386";

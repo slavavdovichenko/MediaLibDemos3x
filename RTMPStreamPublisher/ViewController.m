@@ -89,9 +89,9 @@
 -(void)doConnect {
     
     //resolution = RESOLUTION_LOW;
-    //resolution = RESOLUTION_CIF;
+    resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
-    resolution = RESOLUTION_VGA;
+    //resolution = RESOLUTION_VGA;
     
 #if 1 // use inside RTMPClient instance
     
