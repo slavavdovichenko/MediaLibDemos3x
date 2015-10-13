@@ -46,7 +46,8 @@
     socket = nil;
     upstream = nil;
 
-    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
+    hostTextField.text = @"rtmp://10.0.1.71:1935/live";
+    //hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
 
     streamTextField.text = @"teststream";
@@ -88,8 +89,8 @@
 
 -(void)doConnect {
     
-    //resolution = RESOLUTION_LOW;
-    resolution = RESOLUTION_CIF;
+    resolution = RESOLUTION_LOW;
+    //resolution = RESOLUTION_CIF;
     //resolution = RESOLUTION_MEDIUM;
     //resolution = RESOLUTION_VGA;
     
