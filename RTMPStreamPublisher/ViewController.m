@@ -47,6 +47,7 @@
     upstream = nil;
 
     hostTextField.text = @"rtmp://10.0.1.71:1935/live";
+    //hostTextField.text = @"rtmp://[fe80:0:45b9:50de:d43c:f3ba]:1935/live"; // ipv6
     //hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
 
