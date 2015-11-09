@@ -36,7 +36,7 @@
 
 -(void)viewDidLoad {
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -46,9 +46,9 @@
     socket = nil;
     upstream = nil;
 
-    hostTextField.text = @"rtmp://10.0.1.71:1935/live";
-    //hostTextField.text = @"rtmp://[fe80:0:45b9:50de:d43c:f3ba]:1935/live"; // ipv6
-    //hostTextField.text = @"rtmp://10.0.1.62:1935/live";
+    //hostTextField.text = @"rtmp://10.0.1.71:1935/live";
+    //hostTextField.text = @"rtmp://[fe80::6233:4bff:fe1a:8488]:1935/live"; // ipv6
+    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
 
     streamTextField.text = @"teststream";

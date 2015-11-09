@@ -41,8 +41,9 @@
     
     decoder = nil;
 #if 1
-    hostTextField.text = @"rtmp://10.0.1.71:1935/live";
-    //hostTextField.text = @"rtmp://10.0.1.62:1935/live";
+    //hostTextField.text = @"rtmp://10.0.1.71:1935/live";
+    //hostTextField.text = @"rtmp://[fe80::6233:4bff:fe1a:8488]:1935/live"; // ipv6
+    hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     
     //streamTextField.text = @"11444302290634";
