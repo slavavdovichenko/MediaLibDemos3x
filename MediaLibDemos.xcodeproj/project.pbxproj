@@ -89,7 +89,7 @@
 		F9B3DFFA1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; };
 		F9B3DFFB1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; };
 		F9B3DFFC1BAB5E9A00DC2E93 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B3DFDC1BAB5E9A00DC2E93 /* libx264.a */; };
-		F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
+		F9B3E4E71BFDE5E30093F3A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97C8914170580EC00F0B611 /* CoreData.framework */; };
 		F9F3EDBA161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F3EDBB161070D200B0EA20 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3EDB9161070D200B0EA20 /* Default-568h@2x.png */; };
 		F9F6992215AC5D01004B6F37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BBFA2514A49BA600C5B39B /* UIKit.framework */; };
@@ -316,10 +316,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B3E4E71BFDE5E30093F3A1 /* CoreData.framework in Frameworks */,
+				F97DF94F1B41482000B310FB /* SystemConfiguration.framework in Frameworks */,
 				F9B3DF721BAB5D0C00DC2E93 /* libsqlite3.tbd in Frameworks */,
 				F9B3DF731BAB5D1100DC2E93 /* libz.tbd in Frameworks */,
-				F9D5C1711BB526F500CA85F6 /* CoreData.framework in Frameworks */,
-				F97DF94F1B41482000B310FB /* SystemConfiguration.framework in Frameworks */,
 				F9B3DFE01BAB5E9A00DC2E93 /* libavcodec.a in Frameworks */,
 				F9B3DFE41BAB5E9A00DC2E93 /* libavdevice.a in Frameworks */,
 				F9B3DFEC1BAB5E9A00DC2E93 /* libavformat.a in Frameworks */,

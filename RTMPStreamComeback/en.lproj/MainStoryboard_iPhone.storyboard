@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment identifier="iOS"/>
-        <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -11,12 +10,16 @@
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QBy-7M-fbq"/>
+                        <viewControllerLayoutGuide type="bottom" id="FBc-dc-T5X"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-Gw-3KX">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9rk-TQ-rmG"/>
                                     <barButtonItem title="Connect" id="wl1-hT-lyC">
@@ -45,8 +48,8 @@
                                     <constraint firstAttribute="height" constant="393" id="WFZ-nL-ZDh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-Rd-u1t">
-                                <rect key="frame" x="202" y="395" width="93" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-Rd-u1t">
+                                <rect key="frame" x="202" y="415" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="4if-kP-hU7"/>
                                     <constraint firstAttribute="height" constant="21" id="7M6-Ry-gde"/>
@@ -56,24 +59,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0n-ZG-Xjp">
-                                <rect key="frame" x="214" y="20" width="90" height="122"/>
+                                <rect key="frame" x="214" y="20" width="90" height="142"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="P0n-ZG-Xjp" secondAttribute="trailing" constant="16" id="03V-yn-5Cb"/>
-                            <constraint firstItem="Gnd-Gt-hYy" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Ady-Io-ta2"/>
+                            <constraint firstItem="Gnd-Gt-hYy" firstAttribute="top" secondItem="3" secondAttribute="top" id="Ady-Io-ta2"/>
                             <constraint firstItem="P0n-ZG-Xjp" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="214" id="D11-ss-cEZ"/>
-                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Hm0-sj-b8A"/>
-                            <constraint firstItem="fNa-Rd-u1t" firstAttribute="bottom" secondItem="UxP-Gw-3KX" secondAttribute="top" type="default" id="IMv-YK-2fg"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="P0n-ZG-Xjp" secondAttribute="bottom" constant="318" type="user" id="PMi-I1-Spp"/>
-                            <constraint firstItem="Gnd-Gt-hYy" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="W0Q-K6-n0B"/>
-                            <constraint firstAttribute="trailing" secondItem="UxP-Gw-3KX" secondAttribute="trailing" type="default" id="ZSp-IG-X5O"/>
-                            <constraint firstItem="P0n-ZG-Xjp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gpK-gb-Bar"/>
+                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="Hm0-sj-b8A"/>
+                            <constraint firstItem="fNa-Rd-u1t" firstAttribute="bottom" secondItem="UxP-Gw-3KX" secondAttribute="top" id="IMv-YK-2fg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="P0n-ZG-Xjp" secondAttribute="bottom" constant="318" id="PMi-I1-Spp"/>
+                            <constraint firstItem="Gnd-Gt-hYy" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="W0Q-K6-n0B"/>
+                            <constraint firstAttribute="trailing" secondItem="UxP-Gw-3KX" secondAttribute="trailing" id="ZSp-IG-X5O"/>
+                            <constraint firstItem="P0n-ZG-Xjp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="gpK-gb-Bar"/>
                             <constraint firstAttribute="trailing" secondItem="fNa-Rd-u1t" secondAttribute="trailing" constant="25" id="hY8-wT-0IV"/>
-                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="trailing" secondItem="Gnd-Gt-hYy" secondAttribute="trailing" type="default" id="kEF-Wf-KvD"/>
-                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="leading" secondItem="Gnd-Gt-hYy" secondAttribute="leading" type="default" id="qBD-nr-Dhb"/>
+                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="trailing" secondItem="Gnd-Gt-hYy" secondAttribute="trailing" id="kEF-Wf-KvD"/>
+                            <constraint firstItem="UxP-Gw-3KX" firstAttribute="leading" secondItem="Gnd-Gt-hYy" secondAttribute="leading" id="qBD-nr-Dhb"/>
                         </constraints>
                     </view>
                     <connections>

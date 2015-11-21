@@ -75,6 +75,7 @@
 @interface NSString (Chars)
 -(NSString *)firstCharToUpper;
 -(NSString *)stringByTrimmingWhitespace;
++(NSString *)randomString:(int)numCharacters;
 @end
 
 @interface NSObject (Properties)

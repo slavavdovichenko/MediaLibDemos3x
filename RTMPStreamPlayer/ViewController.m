@@ -18,6 +18,7 @@
     
     MemoryTicker            *memoryTicker;
     MPMediaDecoder          *decoder;
+    BOOL                    isLive;
 }
 
 -(void)sizeMemory:(NSNumber *)memory;
@@ -41,21 +42,25 @@
     
     decoder = nil;
 #if 1
-    //hostTextField.text = @"rtmp://10.0.1.71:1935/live";
+    //hostTextField.text = @"rtmp://localhost:1935/live";
     //hostTextField.text = @"rtmp://[fe80::6233:4bff:fe1a:8488]:1935/live"; // ipv6
     hostTextField.text = @"rtmp://10.0.1.62:1935/live";
     hostTextField.delegate = self;
     
-    //streamTextField.text = @"11444302290634";
     streamTextField.text = @"teststream";
 	streamTextField.delegate = self;
+    
+    isLive = YES;
 #else
     
+    //hostTextField.text = @"rtmp://localhost:1935/vod";
     hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
     hostTextField.delegate = self;
     
     streamTextField.text = @"sample";
     streamTextField.delegate = self;
+    
+    isLive = NO;
 #endif
     
 }
@@ -90,7 +95,7 @@
     
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
     decoder.delegate = self;
-    decoder.isRealTime = YES;
+    decoder.isRealTime = isLive;
     
     decoder.orientation = UIImageOrientationUp;
     
@@ -154,7 +159,6 @@
             
             hostTextField.hidden = YES;
             streamTextField.hidden = YES;
-            //previewView.hidden = NO;
             
             btnPlay.enabled = YES;
             
@@ -192,10 +196,8 @@
                 break;
             }
             
-            [MPMediaData routeAudioToSpeaker];
+            //[MPMediaData routeAudioToSpeaker];
            
-            //hostTextField.hidden = YES;
-            //streamTextField.hidden = YES;
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);
             
             btnPlay.title = @"Pause";
