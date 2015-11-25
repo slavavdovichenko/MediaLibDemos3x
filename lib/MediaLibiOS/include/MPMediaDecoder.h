@@ -27,6 +27,7 @@
 
 @interface MPMediaDecoder : NSObject
 #if IS_STREAMIMAGEVIEW_PUBLIC
+@property (nonatomic, assign, readonly) id stream;
 @property (nonatomic, assign) UIImageView *streamImageView;
 #endif
 @property (nonatomic, assign) id <MPIMediaStreamEvent> delegate;

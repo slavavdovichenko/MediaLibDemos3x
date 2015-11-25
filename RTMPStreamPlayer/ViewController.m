@@ -33,7 +33,7 @@
 
 -(void)viewDidLoad {
     
-    //[DebLog setIsActive:YES];
+    [DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
@@ -57,7 +57,7 @@
     hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
     hostTextField.delegate = self;
     
-    streamTextField.text = @"sample";
+    streamTextField.text = @"testpro";
     streamTextField.delegate = self;
     
     isLive = NO;

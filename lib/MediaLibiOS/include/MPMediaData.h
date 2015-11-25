@@ -112,6 +112,7 @@ typedef enum {
 +(void)setEchoCancellationOn:(BOOL)isOn;
 +(BOOL)getEchoCancellationOn;
 +(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType;
++(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType channels:(int)channels sampleRate:(int)sampleRate;
 +(void)setAVAudioSessionCategoryPlayAndRecord:(AVAudioSessionCategoryOptions)options;
 +(void)routeAudioToSpeaker;
 +(uint64_t)hostTimeMs:(uint64_t)nanosec;
@@ -145,4 +146,18 @@ typedef enum {
 #endif
 -(int)getPendingVideoFrames;
 -(double)getCurrentFPS;
+@end
+
+@protocol MPIAudioPlayer <NSObject>
+-(id)getOwner;
+-(BOOL)hold:(id)owner pcmType:(MPAudioPCMType)pcmType channels:(int)channels sampleRate:(int)sampleRate isRealTime:(BOOL)isRealTime;
+-(void)free:(id)owner;
+-(BOOL)play:(id)owner sample:(void *)sample size:(size_t)size timestamp:(int64_t)timestamp;
+-(BOOL)pause:(id)owner;
+-(BOOL)resume:(id)owner;
+-(BOOL)stop:(id)owner;
+-(BOOL)isRealTime;
+-(BOOL)isPlaying;
+-(int)getCurrentTime; //ms
+-(int)getSupplyTime;  //ms
 @end
