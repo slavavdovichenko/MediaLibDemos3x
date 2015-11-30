@@ -33,7 +33,7 @@
 
 -(void)viewDidLoad {
     
-    [DebLog setIsActive:YES];
+    //[DebLog setIsActive:YES];
     
     [super viewDidLoad];
     
