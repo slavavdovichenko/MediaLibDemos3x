@@ -217,7 +217,7 @@ static NSString *stream = @"teststream";
 
 -(void)stateChanged:(id)sender state:(MPMediaStreamState)state description:(NSString *)description {
     
-    NSLog(@" $$$$$$ <MPIMediaStreamEvent> stateChangedEvent: sender = %@, %d = %@", [sender class], (int)state, description);
+    NSLog(@" $$$$$$ <MPIMediaStreamEvent> stateChangedEvent: sender = %@, %d = %@ [%@]", [sender class], (int)state, description, [NSThread isMainThread]?@"M":@"T");
     
     if (sender == upstream) {
         
@@ -255,8 +255,9 @@ static NSString *stream = @"teststream";
                 [upstream setPreviewLayer:previewView];
                 previewView.hidden = NO;
                 
-                if (!isCrossStreams)
-                    [self doPlay];
+                if (!isCrossStreams) {
+                    [self performSelectorOnMainThread:@selector(doPlay) withObject:nil waitUntilDone:NO];
+                }
                 break;
             }
                 
@@ -293,7 +294,7 @@ static NSString *stream = @"teststream";
 
 -(void)connectFailed:(id)sender code:(int)code description:(NSString *)description {
     
-    NSLog(@" $$$$$$ <MPIMediaStreamEvent> connectFailedEvent: %d = %@\n", code, description);
+    NSLog(@" $$$$$$ <MPIMediaStreamEvent> connectFailedEvent: %d = %@  [%@]", code, description, [NSThread isMainThread]?@"M":@"T");
     
     if (!upstream)
         return;
@@ -306,7 +307,7 @@ static NSString *stream = @"teststream";
 }
 
 -(void)metadataReceived:(id)sender event:(NSString *)event metadata:(NSDictionary *)metadata {
-    NSLog(@" $$$$$$ <MPIMediaStreamEvent> dataReceived: EVENT: %@, METADATA = %@", event, metadata);
+    NSLog(@" $$$$$$ <MPIMediaStreamEvent> dataReceived: EVENT: %@, METADATA = %@  [%@]", event, metadata, [NSThread isMainThread]?@"M":@"T");
 }
 
 @end

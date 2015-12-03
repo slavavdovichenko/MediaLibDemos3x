@@ -148,6 +148,7 @@ typedef enum {
 -(double)getCurrentFPS;
 @end
 
+#if 0 // MPIAudioPlayer protocol is dissable
 @protocol MPIAudioPlayer <NSObject>
 -(id)getOwner;
 -(BOOL)hold:(id)owner pcmType:(MPAudioPCMType)pcmType channels:(int)channels sampleRate:(int)sampleRate isRealTime:(BOOL)isRealTime;
@@ -161,3 +162,4 @@ typedef enum {
 -(int)getCurrentTime; //ms
 -(int)getSupplyTime;  //ms
 @end
+#endif

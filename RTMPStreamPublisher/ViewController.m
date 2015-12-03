@@ -127,7 +127,7 @@
     //upstream.audioCodecId = MP_AUDIO_CODEC_SPEEX;
 
     //[upstream setVideoBitrate:72000];
-    //[upstream setAudioBitrate:40000];
+    //[upstream setAudioBitrate:96000];
     
     orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;

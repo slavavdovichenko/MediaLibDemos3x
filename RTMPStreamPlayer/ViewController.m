@@ -57,7 +57,7 @@
     hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
     hostTextField.delegate = self;
     
-    streamTextField.text = @"testpro";
+    streamTextField.text = @"sample";
     streamTextField.delegate = self;
     
     isLive = NO;
