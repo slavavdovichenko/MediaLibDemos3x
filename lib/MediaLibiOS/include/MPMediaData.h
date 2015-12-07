@@ -147,19 +147,3 @@ typedef enum {
 -(int)getPendingVideoFrames;
 -(double)getCurrentFPS;
 @end
-
-#if 0 // MPIAudioPlayer protocol is dissable
-@protocol MPIAudioPlayer <NSObject>
--(id)getOwner;
--(BOOL)hold:(id)owner pcmType:(MPAudioPCMType)pcmType channels:(int)channels sampleRate:(int)sampleRate isRealTime:(BOOL)isRealTime;
--(void)free:(id)owner;
--(BOOL)play:(id)owner sample:(void *)sample size:(size_t)size timestamp:(int64_t)timestamp;
--(BOOL)pause:(id)owner;
--(BOOL)resume:(id)owner;
--(BOOL)stop:(id)owner;
--(BOOL)isRealTime;
--(BOOL)isPlaying;
--(int)getCurrentTime; //ms
--(int)getSupplyTime;  //ms
-@end
-#endif
