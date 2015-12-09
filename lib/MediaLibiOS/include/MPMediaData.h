@@ -14,7 +14,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 
-#define AUDIO_SAMPLE_RATE 44100
+#define AUDIO_SAMPLE_RATE 16000
 #define AUDIO_BIT_RATE 64000
 #define AUDIO_CHANNELS 1
 
