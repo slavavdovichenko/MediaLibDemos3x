@@ -7,13 +7,16 @@
 //
 
 #define IS_MEDIA_ENCODER 1
-
 #define TIMESTAMP_BY_HOST_TIMER 0
 #define USE_AUDIO_TIMESTAMP 1
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
+
+#define AUDIO_SAMPLE_RATE 44100
+#define AUDIO_BIT_RATE 64000
+#define AUDIO_CHANNELS 1
 
 #define isEchoCancellation [MPMediaData getEchoCancellationOn]
 #define echoCancellationOn [MPMediaData setEchoCancellationOn:YES]
