@@ -19,6 +19,8 @@
     MemoryTicker            *memoryTicker;
     MPMediaDecoder          *decoder;
     BOOL                    isLive;
+    
+    UIActivityIndicatorView *netActivity;
 }
 
 -(void)sizeMemory:(NSNumber *)memory;
@@ -37,10 +39,13 @@
     
     [super viewDidLoad];
     
+    [self initNetActivity];
+    
     memoryTicker = [[MemoryTicker alloc] initWithResponder:self andMethod:@selector(sizeMemory:)];
     memoryTicker.asNumber = YES;
     
     decoder = nil;
+    
 #if 1
     //hostTextField.text = @"rtmp://localhost:1935/live";
     //hostTextField.text = @"rtmp://[fe80::6233:4bff:fe1a:8488]:1935/live"; // ipv6
@@ -62,7 +67,6 @@
     
     isLive = NO;
 #endif
-    
 }
 
 -(void)viewDidUnload {
@@ -91,6 +95,16 @@
     });
 }
 
+-(void)initNetActivity {
+    
+    // isPad fixes kind of device: iPad (YES) or iPhone (NO)
+    BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+    // Create and add the activity indicator
+    netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:isPad?UIActivityIndicatorViewStyleGray:UIActivityIndicatorViewStyleWhiteLarge];
+    netActivity.center = isPad? CGPointMake(400.0f, 480.0f) : CGPointMake(160.0f, 240.0f);
+    [self.view addSubview:netActivity];
+}
+
 -(void)doConnect {
     
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
@@ -102,6 +116,8 @@
     [decoder setupStream:[NSString stringWithFormat:@"%@/%@", hostTextField.text, streamTextField.text]];
 
     btnConnect.title = @"Disconnect";
+    
+    [netActivity startAnimating];
 }
 
 -(void)setDisconnect {
@@ -117,6 +133,8 @@
     streamTextField.hidden = NO;
     
     previewView.hidden = YES;
+    
+    [netActivity stopAnimating];
 }
 
 #pragma mark -
@@ -196,8 +214,9 @@
                 break;
             }
             
-            //[MPMediaData routeAudioToSpeaker];
-           
+            [MPMediaData routeAudioToSpeaker];
+            
+            [netActivity stopAnimating];
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);
             
             btnPlay.title = @"Pause";

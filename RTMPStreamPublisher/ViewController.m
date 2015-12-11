@@ -22,6 +22,8 @@
     
     MPVideoResolution       resolution;
     AVCaptureVideoOrientation orientation;
+    
+    UIActivityIndicatorView *netActivity;
 }
 
 -(void)sizeMemory:(NSNumber *)memory;
@@ -39,6 +41,8 @@
     //[DebLog setIsActive:YES];
     
     [super viewDidLoad];
+    
+    [self initNetActivity];
     
     memoryTicker = [[MemoryTicker alloc] initWithResponder:self andMethod:@selector(sizeMemory:)];
     memoryTicker.asNumber = YES;
@@ -86,6 +90,16 @@
     });
 }
 
+-(void)initNetActivity {
+    
+    // isPad fixes kind of device: iPad (YES) or iPhone (NO)
+    BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
+    // Create and add the activity indicator
+    netActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:isPad?UIActivityIndicatorViewStyleGray:UIActivityIndicatorViewStyleWhiteLarge];
+    netActivity.center = isPad? CGPointMake(400.0f, 480.0f) : CGPointMake(160.0f, 240.0f);
+    [self.view addSubview:netActivity];
+}
+
 // ACTIONS
 
 -(void)doConnect {
@@ -128,6 +142,7 @@
 
     //[upstream setVideoBitrate:72000];
     //[upstream setAudioBitrate:96000];
+    //[upstream setSampleRate:16000];
     
     orientation = AVCaptureVideoOrientationPortrait;
     //orientation = AVCaptureVideoOrientationPortraitUpsideDown;
@@ -140,6 +155,8 @@
     //[upstream stream:streamTextField.text orientation:orientation publishType:PUBLISH_APPEND];
     
     btnConnect.title = @"Disconnect";
+    
+    [netActivity startAnimating];
 }
 
 -(void)doDisconnect {
@@ -163,6 +180,8 @@
     streamTextField.hidden = NO;
     
     previewView.hidden = YES;
+    
+    [netActivity stopAnimating];
 }
 
 -(void)sendMetadata {
@@ -254,6 +273,7 @@
             
         case STREAM_PLAYING: {
            
+            [netActivity stopAnimating];
             [upstream setPreviewLayer:previewView];
 
             hostTextField.hidden = YES;

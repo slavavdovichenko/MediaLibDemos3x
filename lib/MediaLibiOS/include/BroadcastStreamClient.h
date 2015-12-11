@@ -70,6 +70,9 @@ typedef enum {
 
 -(BOOL)setAudioMode:(AudioMode)mode;
 -(BOOL)setAudioBitrate:(uint)bitRate;
+#if __SETTING_SAMPLERATE__
+-(BOOL)setSampleRate:(uint)sampleRate;
+#endif
 
 -(BOOL)connect:(NSString *)url name:(NSString *)name publishType:(MPMediaPublishType)type;
 -(BOOL)attach:(RTMPClient *)client name:(NSString *)name publishType:(MPMediaPublishType)type;

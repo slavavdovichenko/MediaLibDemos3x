@@ -9,6 +9,8 @@
 #define IS_MEDIA_ENCODER 1
 #define TIMESTAMP_BY_HOST_TIMER 0
 #define USE_AUDIO_TIMESTAMP 1
+#define USE_AUDIO_TIMESTAMP_CORRECTION 1
+#define __SETTING_SAMPLERATE__ 0
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
@@ -18,9 +20,7 @@
 #define AUDIO_BIT_RATE 64000
 #define AUDIO_CHANNELS 1
 
-#define isEchoCancellation [MPMediaData getEchoCancellationOn]
-#define echoCancellationOn [MPMediaData setEchoCancellationOn:YES]
-#define echoCancellationOff [MPMediaData setEchoCancellationOn:NO]
+#define isEchoCancellation YES
 
 #define MP_RTMP_CLIENT_IS_CONNECTED @"RTMP.Client.isConnected"
 #define MP_RTMP_CLIENT_STREAM_IS_CREATED @"RTMP.Client.Stream.isCreated"
@@ -37,7 +37,7 @@
 
 #define MP_STREAM_SHOULD_VALID_CONNECT @"You should use a valid 'connect', 'attach' or 'stream' method for making the new stream"
 #define MP_STREAM_SHOULD_DISCONNECT @"You should use 'disconnect' method before making the new stream"
-#define MP_STREAM_SHOULD_STOP @"You should use 'stop' method before making the new stream"
+#define MP_STREAM_SHOULD_STOP @"You should use 'stop' method before making the new stream or changing the options of existing stream"
 
 typedef enum {
     MP_VIDEO_CODEC_NONE,
@@ -112,14 +112,20 @@ typedef enum {
 -(id)initWithData:(uint8_t *)data size:(size_t)size timestamp:(uint)timestamp;
 #endif
 
+#if 0
 +(void)setEchoCancellationOn:(BOOL)isOn;
 +(BOOL)getEchoCancellationOn;
+#endif
++(NSError *)setAudioSampleRate:(double)sampleRate;
++(double)getAudioSampleRate;
 +(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType;
 +(BOOL)setAudioStreamBasicDescription:(AudioStreamBasicDescription *)streamDescription pcmType:(MPAudioPCMType)pcmType channels:(int)channels sampleRate:(int)sampleRate;
 +(void)setAVAudioSessionCategoryPlayAndRecord:(AVAudioSessionCategoryOptions)options;
 +(void)routeAudioToSpeaker;
 +(uint64_t)hostTimeMs:(uint64_t)nanosec;
 +(uint64_t)hostTimeMs;
++(NSString *)descriptionForAudioFormat:(AudioStreamBasicDescription *)audioFormat;
++(NSString *)descriptionForStandardFlags:(UInt32) mFormatFlags;
 @end
 
 @protocol MPIMediaStream <NSObject>
@@ -141,6 +147,9 @@ typedef enum {
 -(void)cleanupStream;
 -(void)setVideoCustom:(uint)fps width:(uint)width height:(uint)height;
 -(void)setAudioBitrate:(uint)bitRate;
+#if __SETTING_SAMPLERATE__
+-(void)setSampleRate:(uint)sampleRate;
+#endif
 -(int)addVideoFrame:(uint8_t *)data dataSize:(size_t)size pts:(CMTime)pts duration:(CMTime)duration;
 #if USE_AUDIO_TIMESTAMP
 -(int)addAudioSamples:(uint8_t *)data dataSize:(size_t)size timestampMs:(int64_t)timestampMs hostTimeMs:(int64_t)hostTimeMs;
