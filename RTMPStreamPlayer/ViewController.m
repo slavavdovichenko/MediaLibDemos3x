@@ -214,7 +214,7 @@
                 break;
             }
             
-            [MPMediaData routeAudioToSpeaker];
+            //[MPMediaData routeAudioToSpeaker];
             
             [netActivity stopAnimating];
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);
