@@ -6,11 +6,15 @@
 //  Copyright (c) 2013 The Midnight Coders, Inc. All rights reserved.
 //
 
+// mode
 #define IS_MEDIA_ENCODER 1
 #define TIMESTAMP_BY_HOST_TIMER 0
 #define USE_AUDIO_TIMESTAMP 1
 #define USE_AUDIO_TIMESTAMP_CORRECTION 1
+
+// probe
 #define __SETTING_SAMPLERATE__ 0
+#define REMOVE_BUFFERS_ON_PAUSE 0
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
