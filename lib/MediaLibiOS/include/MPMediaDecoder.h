@@ -6,11 +6,6 @@
 //  Copyright 2013 The Midnight Coders, Inc. All rights reserved.
 //
 
-#define IS_STREAMIMAGEVIEW_PUBLIC 1
-#define IS_AUDIO_ARBITRAGE 1
-#define IS_VIDEO_BUFFERING 1
-#define OFF_REALTIME_BUFFERING 1
-
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
 #else
@@ -28,10 +23,8 @@
 @protocol IVideoPlayer, IAudioPlayer, MPIMediaStreamEvent;
 
 @interface MPMediaDecoder : NSObject
-#if IS_STREAMIMAGEVIEW_PUBLIC
 @property (nonatomic, assign, readonly) id stream;
 @property (nonatomic, assign) UIImageView *streamImageView;
-#endif
 @property (nonatomic, assign) id <MPIMediaStreamEvent> delegate;
 @property (nonatomic, retain) id <IVideoPlayer> video;
 @property (nonatomic, retain) id <IAudioPlayer> audio;

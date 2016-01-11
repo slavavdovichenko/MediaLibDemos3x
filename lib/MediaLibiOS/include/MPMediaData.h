@@ -11,10 +11,12 @@
 #define TIMESTAMP_BY_HOST_TIMER 0
 #define USE_AUDIO_TIMESTAMP 1
 #define USE_AUDIO_TIMESTAMP_CORRECTION 1
+#define IS_VIDEO_BUFFERING 1
+#define OFF_REALTIME_BUFFERING 1
+#define REMOVE_BUFFERS_ON_PAUSE 0
 
 // probe
 #define __SETTING_SAMPLERATE__ 0
-#define REMOVE_BUFFERS_ON_PAUSE 0
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
@@ -93,6 +95,15 @@ typedef enum {
 	MP_AUDIO_PCM_FLT,
 	MP_AUDIO_PCM_DBL,
 } MPAudioPCMType;
+
+
+#if IS_VIDEO_BUFFERING
+@interface MPVideoFrame : NSObject
+@property (nonatomic, retain) UIImage *image;
+@property int64_t timestamp;
++(MPVideoFrame *)videoFrame:(UIImage *)image timestamp:(int64_t)timestamp;
+@end
+#endif
 
 @interface MPMediaData : NSObject
 @property uint8_t *data;
