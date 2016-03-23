@@ -21,6 +21,7 @@
 }
 @property (nonatomic, retain) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSString *swiftClassPrefix;
 
 // Singleton accessor:  this is how you should ALWAYS get a reference to the class instance.  Never init your own. 
 +(Types *)sharedInstance;
@@ -39,14 +40,15 @@
 +(NSString *)objectClassName:(id)obj;
 +(NSString *)typeClassName:(Class)type;
 +(NSString *)insideTypeClassName:(Class)type;
-+(id)classInstance:(Class)type;
-+(Class)classByName:(NSString *)className;
+-(id)classInstance:(Class)type;
+-(Class)classByName:(NSString *)className;
 +(id)classInstanceByClassName:(NSString *)className;
 +(BOOL)isAssignableFrom:(Class)type toObject:(id)obj;
 +(NSArray *)propertyKeys:(id)obj;
 +(NSArray *)propertyAttributes:(id)obj;
 +(NSDictionary *)propertyKeysWithAttributes:(id)obj;
 +(NSDictionary *)propertyDictionary:(id)obj;
+//-(void)makeSwiftClassPrefix:(NSString *)prefix item:(NSString *)item;
 // target/plist options
 +(NSString *)targetName;
 +(NSDictionary *)getInfoPlist;
