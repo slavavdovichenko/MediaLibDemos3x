@@ -58,8 +58,9 @@
     isLive = YES;
 #else
     
+    hostTextField.text = @"rtmp://192.168.2.103:1935/vod";
     //hostTextField.text = @"rtmp://localhost:1935/vod";
-    hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
+    //hostTextField.text = @"rtmp://10.0.1.62:1935/vod";
     hostTextField.delegate = self;
     
     streamTextField.text = @"sample";
@@ -110,6 +111,7 @@
     decoder = [[MPMediaDecoder alloc] initWithView:previewView];
     decoder.delegate = self;
     decoder.isRealTime = isLive;
+    //decoder.clientBufferMs = 1000;
     
     decoder.orientation = UIImageOrientationUp;
     
@@ -214,7 +216,7 @@
                 break;
             }
             
-            //[MPMediaData routeAudioToSpeaker];
+            [MPMediaData routeAudioToSpeaker];
             
             [netActivity stopAnimating];
             previewView.hidden = (decoder.videoCodecId == MP_VIDEO_CODEC_NONE);

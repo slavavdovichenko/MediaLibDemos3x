@@ -30,6 +30,7 @@
 -(id)initWithUrl:(NSString *)gatewayURL;
 -(id)initWithUrl:(NSString *)gatewayURL destination:(NSString *)destination;
 -(void)setClientClass:(Class)type forServerType:(NSString *)serverTypeName;
+-(void)setNetworkActivityIndicatorOn:(BOOL)value;
 // sync invokes
 -(id)invoke:(NSString *)methodName args:(NSArray *)args;
 -(id)invoke:(NSString *)className method:(NSString *)methodName args:(NSArray *)args;

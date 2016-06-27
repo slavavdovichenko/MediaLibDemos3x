@@ -37,6 +37,7 @@
 #define MP_STREAM_IS_BUSY @"streamIsBusy"
 #define MP_RESOURCE_TEMPORARILY_UNAVAILABLE @"Resource temporarily unavailable" 
 
+#define MP_NETSTREAM_PUBLISH_DENIED @"NetStream.Publish.Denied"
 #define MP_NETSTREAM_PUBLISH_START @"NetStream.Publish.Start"
 #define MP_NETSTREAM_PLAY_START @"NetStream.Play.Start"
 #define MP_NETSTREAM_PLAY_STREAM_NOT_FOUND @"NetStream.Play.StreamNotFound"

@@ -10,7 +10,7 @@
 
 #define DEFAULT_MAX_SIZE 65535
 
-@interface Base64 : NSObject 
+@interface BEBase64 : NSObject
 +(NSString *)encode:(const uint8_t *)input length:(NSInteger)length;
 +(NSString *)encode:(NSData *)rawBytes;
 +(NSData *)decode:(const char *)string length:(NSInteger)inputLength;
